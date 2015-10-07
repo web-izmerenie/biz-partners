@@ -1,0 +1,14 @@
+{
+  "name": "biz-partners",
+  "version": "0.0.1",
+  "authors": [
+    "Andrey Chechkin <andrey.chechkin@me.com>"
+  ],
+  "description": "Website legal service",
+  "main": "index.php",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "homepage": ""
+}
