@@ -12,8 +12,76 @@
 	.bg('main-catalog.jpg', no-repeat);
 	color: #fff;
 	font-family: roboto-r;
+	padding: 7.8% 0px 5.2%;
 
 	.wrapper{
-		max-width: 1260px;
+		max-width: 1275px;
+
+		h1{
+			text-align: center;
+			font-size: 40px;
+			line-height: 46px;
+
+			@media (max-width: 1275px){ font-size: 36px; }
+		}
+
+		ul{
+			margin-top: 113px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			li{
+				list-style: none;
+				margin-right: 5px;
+				margin-bottom: 5px;
+
+				a{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 415px;
+					height: 148px;
+					background: rgba(198, 199, 198, 0.80);
+					color: #114466;
+					text-decoration: none;
+					font-size: 26px;
+					transition: background @transition;
+
+					.text{
+						width: 275px;
+						margin-left: 35px;
+						line-height: 1;
+					}//text
+
+					&:hover{ background: #efeeeb; }
+				}//a
+
+				&:last-child{
+					width: 65.4%;
+					background: #113a56;
+
+					@media (max-width: 1275px){
+						width: 415px;
+
+						.more-text{
+							font-size: 14px;
+							padding: 0 10px;
+
+							br{display: none;}
+						}
+					}
+				}
+				.more-text{
+					display: table-cell;
+					vertical-align: middle;
+					font-size: 18px;
+					color: #c0c0c0;
+					height: 148px;
+					padding: 0 46px;
+					line-height: 24px;
+				}//more-text
+			}//li
+		}//ul
 	}
 }//main-catalog
