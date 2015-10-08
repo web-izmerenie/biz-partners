@@ -13,6 +13,7 @@
 
 Thumbs.db
 
+bower_components
 node_modules
 front-end-gulp
 bitrix/templates/main/styles/build
@@ -23,6 +24,10 @@ bitrix/templates/main/styles/src/sprites
 robots.txt
 smsc
 html
+styles/build
+scripts/build
+.DS_Store
+bower
 
 # bitrix tmp dirs
 bitrix/cache

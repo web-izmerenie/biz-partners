@@ -10,5 +10,8 @@
     "globals"
   ],
   "license": "MIT",
-  "homepage": ""
+  "homepage": "",
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3"
+  }
 }

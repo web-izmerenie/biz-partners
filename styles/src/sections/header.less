@@ -1,0 +1,129 @@
+/*
+ * Style for header
+ *
+ * @author Andrey Chechkin
+ * @license GNU/AGPLv3
+ * @see {@link https://www.gnu.org/licenses/agpl-3.0.txt|License}
+ */
+
+header{
+	background: #114466;
+	width: 100%;
+	height: 120px;
+
+	.wrapper{
+		max-width: 1265px;
+		min-width: 960px;
+		width: 100%;
+		margin: 0 auto;
+		font-family: roboto-m;
+
+		.column{
+			display: inline-block;
+			vertical-align: top;
+
+			.logo{
+				display: block;
+				.bg('logo.png', no-repeat);
+				width: 138px;
+				height: 102px;
+				margin: 7px 0 0;
+			}//logo
+
+			nav ul li{
+				display: inline-block;
+				list-style: none;
+				max-width: 142px;
+				vertical-align: top;
+				margin-right: 9.3%;
+				line-height: 18px;
+				height: 120px;
+				box-sizing: border-box;
+				padding-top: 51px;
+
+				@media (max-width: 1225px){	margin-right: 5%; }
+				@media (max-width: 1080px){ margin-right: 4%; }
+
+				&:last-child{
+					margin-right: 0;
+				}
+
+				&:hover{
+					border-bottom: 3px solid #aacc33;
+				}
+				
+				a{
+					color: #fff;
+					text-decoration: none;
+					font-size: 16px;
+				}
+			}
+		}//column
+
+		#contacts{
+			width: 36%;
+			float: right;
+			text-align: right;
+
+			a{
+				color: #fff;
+				text-decoration: none;
+				border-bottom: 1px dashed #fff;
+				font-size: 18px;
+
+				@media (max-width: 1080px){ font-size: 15px; }
+
+				&:hover{
+					border: none;
+				}
+			}
+
+			.figure{
+				display: block;
+				text-align: right;
+				margin: 0 0 6px;
+
+				a{
+					display: inline-block;
+					vertical-align: top;
+					color: #114466;
+					text-decoration: none;
+					width: 44.5%;
+					height: 40px;
+					line-height: 37px;
+					background: #aacc33;
+					border-bottom-right-radius: 20px;
+					border-bottom-left-radius: 20px;
+					text-align: center;
+					border: none;
+					padding: 0;
+
+					&:first-of-type{
+						margin-right: 5px;
+					}
+				}
+			}//figure
+
+			.callme{
+				.bg('icon-tel.png', no-repeat 0 center);
+				padding-left: 23px;
+				margin-right: 10%;
+			}
+
+			.writeme{
+				.bg('icon-mail.png', no-repeat 0 center);
+				padding-left: 33px;
+				margin-right: 7%;
+			}
+		}//contacts
+
+		#logo{
+			width: 14.4%;
+		}
+
+		#menu{
+			width: 48%;
+		}
+
+	}//wrapper
+}//header
