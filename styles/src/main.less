@@ -28,7 +28,22 @@ html{
 			padding: 0;
 		}
 
+		h1{
+			margin: 0;
+		}
+
+		.wrapper{
+			max-width: 1265px;
+			min-width: 960px;
+			width: 100%;
+			margin: 0 auto;
+		}
+
 		@import "./sections/header.less";
+
+		.content{
+			@import "./pages/index.less";
+		}//content
 
 	}//body
 }//html
