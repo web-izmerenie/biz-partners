@@ -6,13 +6,18 @@
  * @see {@link https://www.gnu.org/licenses/agpl-3.0.txt|License}
  */
 
- @import "../mixins.less";
+@import "../mixins.less";
+
+@middle: 1275px;
+@small: 1050px;
 
 .main-catalog{
 	.bg('main-catalog.jpg', no-repeat);
 	color: #fff;
 	font-family: roboto-r;
-	padding: 7.8% 0px 5.2%;
+	padding: 7.8% 0 5.2%;
+
+	@media (max-width: @middle){ padding: 7.8% 0 0; }
 
 	.wrapper{
 		max-width: 1275px;
@@ -22,7 +27,7 @@
 			font-size: 40px;
 			line-height: 46px;
 
-			@media (max-width: 1275px){ font-size: 36px; }
+			@media (max-width: @middle){ font-size: 36px; }
 		}
 
 		ul{
@@ -61,7 +66,7 @@
 					width: 65.4%;
 					background: #113a56;
 
-					@media (max-width: 1275px){
+					@media (max-width: @middle){
 						width: 415px;
 
 						.more-text{
@@ -85,3 +90,50 @@
 		}//ul
 	}
 }//main-catalog
+
+.main-advenurage{
+	background: #f2f2f0;
+	padding: 45px 0 100px;
+
+	.wrapper{
+		max-width: 1115px;
+
+		h1{
+			text-align: center;
+			color: #393939;
+			font-size: 40px;
+			font-family: roboto-t;
+		}
+
+		ul{
+			list-style: none;
+			display: flex;
+			justify-content: space-between;
+			text-align: center;
+			margin: 45px 0 0;
+
+			li{
+				img{
+					display: block;
+					margin: 0 auto;
+
+					@media (max-width: @small){ width: 110px; }
+				}
+
+				.text{
+					color: #393939;
+					font-size: 18px;
+					font-family: roboto-m;
+					width: 252px;
+					margin: 7px auto 0;
+					line-height: 24px;
+
+					@media (max-width: @small){
+						font-size: 16px;
+						width: 85%;
+					}
+				}//text
+			}
+		}//ul
+	}//wrapper
+}//main-advenurage
