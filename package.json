@@ -4,6 +4,7 @@
   "description": "Website Legal services",
   "main": "gulpfile.js",
   "dependencies": {
+    "coffeeify": "^1.1.0",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.2.0",
     "gulp-browserify": "^0.5.1",

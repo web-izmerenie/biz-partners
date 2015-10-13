@@ -1,0 +1,28 @@
+extends ./layot.jade
+
+block config
+	- var main = "contacts"
+
+block content
+	.wrapper
+		h1 Контакты
+		ul
+			li
+				span Телефон:
+				p +7 915 007 07 75
+			li
+				span Адрес:
+				p.
+					107023 г. Москва, ул. Большая почтовая, 36, 18 подъезд, сектор А,#[br] 
+					1 этаж, офис 110
+			li
+				span Время работы компании:
+				p с 10:00 до 19:00
+			li
+				span E-mail:
+				p dmitrij.pipinsh@gmail.com
+		
+	.map
+		script(type="text/javascript"
+			charset="utf-8" 
+			src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=JqJlva7Q1tZPjieOVOyxdviJ2JVJLW3d&width=100%&height=100%&lang=ru_RU&sourceType=constructor")

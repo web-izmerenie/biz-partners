@@ -1,3 +1,6 @@
+- var main = "main-page"
+block config
+
 doctype
 html(lang="ru")
 	head
@@ -9,6 +12,7 @@ html(lang="ru")
 		meta(name="keywords" content="")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		link(rel='stylesheet', href='../styles/build/build.css')
+		
 		
 	body
 		header
@@ -32,7 +36,7 @@ html(lang="ru")
 					span.writeme
 						a(href="#writeme") Написать нам
 				
-		main.content
+		main.content(id="#{main}")
 			block content
 		footer
 			.wrapper

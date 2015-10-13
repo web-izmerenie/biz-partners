@@ -1,0 +1,42 @@
+/*
+ * Styles for page Contacts
+ *
+ * @author Andrey Chechkin
+ * @license GNU/AGPLv3
+ * @see {@link https://www.gnu.org/licenses/agpl-3.0.txt|License}
+ */
+
+@import "../mixins.less";
+
+#contacts{
+	.wrapper{
+		width: 1260px;
+
+		ul{
+			margin: 44px 0px 75px;
+
+			li{
+				display: inline-block;
+				font-size: 18px;
+				font-family: roboto-r;
+				vertical-align: top;
+				width: 29.8%;
+				line-height: 23px;
+
+				&:nth-child(2){
+					margin-left: 1.2%;
+					margin-right: 8.7%;
+				}
+
+				&:last-child{
+					margin-top: -19px;
+				}
+
+				span{ font-family: roboto-m; }
+			}
+		}
+	}
+	.map{
+		height: 510px;
+	}//map
+}//contacts

@@ -37,21 +37,28 @@ html{
 			margin: 0;
 		}
 
+		h1{
+			font-size: 40px;
+			font-family: roboto-t;
+		}
+
 		.wrapper{
 			max-width: 1265px;
 			min-width: 960px;
 			width: 95%;
 			margin: 0 auto;
+			padding: 46px 0 0;
 		}
 
 		@import "./sections/header.less";
 
 		.content{
 			padding: 0 0 387px;
-
-			@import "./pages/index.less";
-			@import "./pages/404.less";
 		}//content
+
+		@import "./pages/index.less";
+		@import "./pages/404.less";
+		@import "./pages/contacts.less";
 
 		@import "./sections/footer.less";
 	}//body
