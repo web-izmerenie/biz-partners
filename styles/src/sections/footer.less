@@ -1,0 +1,78 @@
+/*
+ * Style for footer
+ *
+ * @author Andrey Chechkin
+ * @license GNU/AGPLv3
+ * @see {@link https://www.gnu.org/licenses/agpl-3.0.txt|License}
+ */
+
+@import "../mixins.less";
+
+footer{
+	background: #114466;
+	color: #fff;
+	padding: 60px 0 87px;
+
+	.wrapper{
+		max-width: 1275px;
+
+		.column{
+			display: inline-block;
+			vertical-align: top;
+			font-size: 16px;
+
+			ul{
+				display: inline-block;
+				list-style: none;
+				vertical-align: top;
+				font-family: roboto-m;
+				margin-right: 110px;
+
+				&:last-of-type{margin-right: 0}
+
+				li{
+					margin-bottom: 8px;
+					a{
+						color: #fff;
+						&:hover{text-decoration: none;}
+					}
+				}
+			}
+		}//column
+
+		#copy{
+			width: 28.3%;
+			font-family: roboto-l;
+
+			b{
+				font-family: roboto-m;
+				font-weight: normal;
+			}
+
+			p{
+				margin-top: 24px;
+				line-height: 20px;
+			}
+		}
+
+		#developer{
+			width: 9%;
+			float: right;
+			white-space: nowrap;
+
+			a{
+				color: #fff;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-family: roboto-m;
+				font-size: 14px;
+				.bg('wi.png', no-repeat right center);
+				padding-right: 21px;
+			}
+		}
+
+		#footer-menu{
+			width: 62%;
+		}
+	}//wrapper
+}
