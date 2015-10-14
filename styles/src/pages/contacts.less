@@ -10,7 +10,7 @@
 
 #contacts{
 	.wrapper{
-		width: 1260px;
+		max-width: 1260px;
 
 		ul{
 			margin: 44px 0px 75px;
@@ -26,6 +26,10 @@
 				&:nth-child(2){
 					margin-left: 1.2%;
 					margin-right: 8.7%;
+
+					@media (max-width: 1060px){
+						margin-right: 8%;
+					}
 				}
 
 				&:last-child{
