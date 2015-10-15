@@ -1,0 +1,166 @@
+/*
+ * Styles for change legislation.
+ *
+ * @author Andrey Chechkin
+ * @license GNU/AGPLv3
+ * @see {@link https://www.gnu.org/licenses/agpl-3.0.txt|License}
+ */
+
+@import "../mixins.less";
+
+#change-legislation{
+	.wrapper{
+		max-width: 1286px;
+
+		h1{
+			display: block;
+			width: 65%;
+		}
+
+		.rss{
+			background: #2277aa;
+			border-radius: 25px;
+			color: #fff;
+			font-family: roboto-m;
+			font-size: 18px;
+			text-decoration: none;
+			float: right;
+			margin-top: -40px;
+			margin-top: -41px;
+			margin-right: 26px;
+			padding: 6px 18px;
+
+			span{
+				.bg('icon-mail.png', no-repeat  0 center);
+				padding-left: 30px;
+			}
+		}
+	}//wrapper
+
+	.sections{
+		.wrapper{
+			max-width: 1312px;
+			padding: 0px;
+			margin: 30px auto 0px;
+
+			ul li{
+				display: inline-block;
+				padding: 10px 16px;
+				margin-right: 26px;
+
+				&:last-child{ margin-right: 0px; }
+
+				a{
+					color: #2277aa;
+					font-family: roboto-m;
+					font-size: 18px;
+					text-decoration: none;
+					border-bottom: 1px dashed;
+
+					&:hover{ border: none;}
+				}
+			}
+
+			.active{
+				background: #fff;
+
+				a{
+					border: none;
+					color: #aacc33;
+				}
+			}
+		}
+	}//sections
+
+	.items{
+		background: #fff;
+		padding: 0 0 60px;
+
+		.wrapper{
+			.item{
+				padding: 0 0 26px;
+
+				.date{
+					display: inline-block;
+					font-family: roboto-m;
+					font-size: 18px;
+					width: 10%;
+					vertical-align: top;
+				}
+
+				.text{
+					display: inline-block;
+					width: 86%;
+					vertical-align: top;
+					margin: 3px 0 0;
+					line-height: 1.3;
+
+					a{
+						font-size: 16px;
+
+						&:hover{
+							color: #393939;
+						}
+					}
+
+					p{
+						margin: 8px 0 0;
+
+						span{
+							display: block;
+							color: #989897;
+							margin: 0 0 7px;
+						}
+					}
+				}//text
+			}//item
+		}//wrapper
+
+		.pager{
+			margin: 7px 0 0;
+			height: 32px;
+
+			.wrapper{
+				position: relative;
+				padding: 0;
+
+				ul{
+					display: table;
+					margin: 0 auto;
+
+					li{
+						display: inline-block;
+						margin-right: 6px;
+
+						&:last-child{margin-right:  0px;}
+
+						a{
+							font-size: 21px;
+							font-family: roboto-m;
+							text-decoration: none;
+						}
+
+						.active{ color: #aacc33; }
+					}//li
+				}//ul
+
+				.arrow{
+					display: block;
+					position: absolute;
+					left: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 22px;
+					height: 36px;
+					.bg('arrows.png', no-repeat);
+				}
+
+				a[href="#next"]{
+					left: auto;
+					right: 25px;
+					background-position: -24px 0;
+				}
+			}
+		}//pager
+	}//items
+}//change-legislation
