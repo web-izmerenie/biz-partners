@@ -54,6 +54,20 @@ html{
 
 		.content{
 			padding: 0 0 387px;
+
+      .pathway{
+        font-size: 40px;
+        font-family: roboto-t;
+        line-height: 32px;
+
+        a{
+          text-decoration: none;
+
+          &::after{
+            content: ' / ';
+          }
+        }
+      }//pathway
 		}//content
 
 		@import "./pages/index.less";
@@ -61,6 +75,7 @@ html{
 		@import "./pages/contacts.less";
 		@import "./pages/about.less";
 		@import "./pages/change_legislation.less";
+    @import "./pages/change_legeslation_item.less";
 
 		@import "./sections/footer.less";
 	}//body
