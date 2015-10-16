@@ -1,0 +1,38 @@
+/*
+ * Styles for news list.
+ *
+ * @author Andrey Chechkin
+ * @license GNU/AGPLv3
+ * @see {@link https://www.gnu.org/licenses/agpl-3.0.txt|License}
+ */
+
+@import "../mixins.less";
+
+.news{
+	.wrapper{
+		h1{
+			width: auto;
+			display: inline;
+			margin-right: 20px;
+		}
+		.rss{
+			float: none;
+			margin: 0px;
+		}
+	}//wrapper
+
+	.items{
+		margin: 32px 0px 0px;
+
+		.wrapper{
+
+			article{
+				padding: 0px 0px 59px;
+
+				.text{
+					p{margin: 16px 0px 0px;}
+				}
+			}//article
+		}//wrapper
+	}//items
+}//news
