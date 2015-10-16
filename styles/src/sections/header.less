@@ -29,7 +29,7 @@ header{
 				margin: 7px 0 0;
 			}//logo
 
-			nav ul li{
+			nav > ul > li{
 				display: inline-block;
 				list-style: none;
 				max-width: 142px;
@@ -39,6 +39,7 @@ header{
 				height: 120px;
 				box-sizing: border-box;
 				padding-top: 51px;
+				position: relative;
 
 				@media (max-width: 1310px){	margin-right: 5%; }
 				@media (max-width: 1115px){ margin-right: 2.7%; }
@@ -50,6 +51,34 @@ header{
 				&:hover{
 					border-bottom: 3px solid #aacc33;
 				}
+
+				& > ul{
+					display: none;
+					position: absolute;
+					top: 120px;
+					left: -179px;
+					width: 952px;
+					list-style: outside none none;
+					background: #fff;
+					padding: 25px 13px 14px 27px;
+
+					li{
+						display: inline-block;
+						margin-right: 33px;
+						margin-bottom: 16px;
+
+						a{
+							color: #2277aa;
+							font-size: 18px;
+
+							&:hover{
+								color: #aacc33;
+							}
+						}
+
+						.active{ color: #aacc33; }
+					}//li
+				}//ul
 
 				a{
 					color: #fff;
