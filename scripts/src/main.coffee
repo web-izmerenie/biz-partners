@@ -9,6 +9,8 @@
 $ = require 'jquery'
 
 catalog = require './pages/catalog.coffee'
+menu = require './modules/menu-hover.coffee'
 
 $ ->
+	do menu.init
 	do catalog.init
