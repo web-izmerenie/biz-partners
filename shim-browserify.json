@@ -1,1 +1,10 @@
-{}
+{
+	"jquery": {
+		"path": "./bower_components/jquery/dist/jquery.min.js",
+		"exports": null
+	},
+	"wookmark": {
+		"path": "./bower_components/wookmark/wookmark.min.js",
+		"exports": null
+	}
+}

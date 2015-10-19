@@ -2,16 +2,15 @@
   "name": "biz-partners",
   "version": "0.0.1",
   "authors": [
-    "Andrey Chechkin <andrey.chechkin@me.com>"
+    "Andrey Chechkin <andrey.chechkin@web-izmerenie.ru>"
   ],
   "description": "Website legal service",
   "main": "index.php",
-  "moduleType": [
-    "globals"
-  ],
   "license": "MIT",
   "homepage": "",
   "dependencies": {
-    "normalize-css": "normalize.css#~3.0.3"
+    "normalize-css": "normalize.css#~3.0.3",
+    "jquery": "~2.1.4",
+    "wookmark": "wookmark-jquery#~2.0.1"
   }
 }
