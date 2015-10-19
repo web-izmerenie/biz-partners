@@ -7,7 +7,7 @@
 ###
 
 $ = require 'jquery'
-wookmark = require 'wookmark'
+Wookmark = require 'wookmark'
 
 module.exports.init = ->
 
