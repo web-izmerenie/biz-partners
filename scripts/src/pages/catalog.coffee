@@ -15,4 +15,5 @@ module.exports.init = ->
 	$sectionslist = $main.find '.catalog-sections'
 	$items = $sectionslist.find '.item'
 
-	do $sectionslist.wookmark
+	$sectionslist.wookmark
+		align: 'left'
