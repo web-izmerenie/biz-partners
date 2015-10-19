@@ -5,6 +5,9 @@
 	},
 	"wookmark": {
 		"path": "./bower_components/wookmark/wookmark.min.js",
-		"exports": null
+		"exports": "Wookmark",
+		"depends": {
+			"jquery": "jQuery"
+		}
 	}
 }
