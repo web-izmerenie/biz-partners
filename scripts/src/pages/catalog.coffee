@@ -7,13 +7,22 @@
 ###
 
 $ = require 'jquery'
-Wookmark = require 'wookmark'
 
 module.exports.init = ->
 
 	$main = $ '.catalog'
 	$sectionslist = $main.find '.catalog-sections'
 	$items = $sectionslist.find '.item'
+	$link = $items.find '> a'
+	$img = null
+	$src = null
 
-	$sectionslist.wookmark
-		align: 'left'
+	$link.hover(
+		->
+			$img = $(@).find '> img'
+			$src = $img.attr 'src'
+
+			$img.attr('src', $img.data('hover'))
+		->
+			$img.attr('src', $src)
+	)

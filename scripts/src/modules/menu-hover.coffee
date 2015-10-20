@@ -11,11 +11,14 @@ $ = require 'jquery'
 module.exports.init = ->
 	$main = $ '#menu'
 	$mainItems = $main.find 'li'
-	animateComplete = false
+	animateComplete = true
 
 	$mainItems.hover(
 		->
-			$(@).find('ul').show().removeClass().addClass('animated flipInX')
+			if animateComplete
+				$(@).find('ul').show().removeClass().addClass('animated flipInX')
+				animateComplete = false
 		->
-			$(@).find('ul').removeClass().addClass('animated flipOutX')
+			$(@).find('ul').removeClass().addClass('animated flipOutX').fadeOut()
+			animateComplete = true
 	)
