@@ -1,0 +1,62 @@
+/*
+ * Styles for main catalog items list page
+ *
+ * @author Andrey Chechkin
+ * @license GNU/AGPLv3
+ * @see {@link https://www.gnu.org/licenses/agpl-3.0.txt|License}
+ */
+
+@import "../mixins.less";
+
+.catalog-detail{
+		.back{
+			.wrapper{
+				max-width: 1260px;
+
+				a{
+					text-decoration: none;
+					font-family: roboto-t;
+					font-size: 40px;
+					.bg('back.png', no-repeat 0 center);
+					padding-left: 25px;
+
+					&:hover{
+						.bg('back_hover.png', no-repeat 0 center);
+						color: #AC3;
+					}
+				}
+			}//wrapper
+		}//back
+
+		.items{
+			.wrapper{
+				nav{
+					display: flex;
+					justify-content: flex-start;
+					list-style: outside none none;
+
+						a{
+							font-family: roboto-m;
+							font-size: 18px;
+							text-decoration: none;
+							background: #e6e5e3;
+							padding: 12px 39px 14px;
+							line-height: 20px;
+
+							&:hover{
+								color: #aacc33;
+							}
+						}
+
+					.active{
+						background: #fff;
+						color: #aacc33;
+					}
+				}
+			}//wrapper
+		}//items
+
+		.title{
+			.title-text()
+		}
+}//catalog-detail
