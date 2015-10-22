@@ -59,4 +59,148 @@
 		.title{
 			.title-text()
 		}
+
+		.description{
+			.wrapper{
+				padding: 25px 0px 0px;
+				max-width: 1260px;
+
+				h2{
+					font-family: roboto-t;
+					font-size: 40px;
+				}
+
+				ol{
+					list-style-type: none;
+					counter-reset: num;
+					display: flex;
+					justify-content: space-between;
+					align-items: flex-start;
+					margin: 14px 0 0;
+					width: 97%;
+
+					li{
+						max-width: 270px;
+						font-size: 17px;
+
+						&::before{
+							content: counter(num);
+							counter-increment: num;
+							display: block;
+							font-size: 24px;
+						}
+					}
+				}//ol
+
+				.services{
+					border-top: 2px solid #d4d4d4;
+					margin: 28px 0 0;
+					padding: 32px 0 0;
+
+					& > p{
+						.label-arrow();
+					}
+
+					ul{
+						list-style: none;
+						display: flex;
+						justify-content: space-between;
+						align-items: flex-start;
+						margin: 23px 0 0;
+						width: 91%;
+
+						li{
+							margin-right: 30px;
+							line-height: 23px;
+
+							&:last-child{ margin-right:  0}
+
+							a{
+								color: #114466;
+								font-size: 21px;
+								text-decoration: none;
+								border-bottom: 1px dashed;
+
+								&:hover{
+									border: none;
+								}
+							}
+
+							.active{
+								color: #aacc33;
+								border-bottom: 1px solid rgba(255, 255, 255, 0);
+								display: inline;
+							}
+						}
+					}//ul
+
+					.tabs{
+						display: none;
+						font-size: 17px;
+
+						.text{
+							max-width: 1100px;
+							margin: 18px 0 59px;
+							line-height: 21px;
+						}
+
+						.row{
+							.column{
+								display: inline-block;
+								vertical-align: top;
+								height: 150px;
+								background: #fff;
+								box-sizing: border-box;
+								padding: 23px 35px 0px 22px;
+							}
+
+							#price{
+								width: 67%;
+
+								p{
+									font-size: 20px;
+									font-family: roboto-b;
+								}
+
+								.file{
+									a{
+										text-decoration: none;
+										.bg('file.png', no-repeat 0 0);
+										display: inline-block;
+										vertical-align: top;
+										height: 42px;
+										max-width: 300px;
+										padding-left: 40px;
+										margin-left: 22px;
+
+										&:hover{
+											color: #aacc33;
+											background-position: 0 -43px;
+										}
+									}
+								}
+							}
+
+							#tel{
+								width: 32.5%;
+
+								span{
+									font-family: roboto-t;
+									font-size: 21px;
+								}
+
+								p{
+									font-family: roboto-m;
+									font-size: 36px;
+								}
+							}
+						}
+					}//tabs
+
+					.active{
+						display: inherit;
+					}
+				}//services
+			}//wrapper
+		}//description
 }//catalog-detail
