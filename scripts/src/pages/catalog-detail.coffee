@@ -16,13 +16,15 @@ module.exports.init = ->
 	$links.click (e) ->
 		tab_id = $(@).attr 'href'
 
+		return false if $(@).hasClass 'active'
+		
 		do e.preventDefault
 		$links.removeClass 'active'
 		$tabs.hide().removeClass 'active'
 
 		$(@).addClass 'active'
 		$(tab_id).fadeIn(
-			700, 
+			700,
 			->
 				$(@).addClass 'active'
 		)
