@@ -111,3 +111,18 @@ html(lang="ru")
 						Мы рассмотрим 
 						и свяжемся с вами.
 						
+		.module-window#rss
+			.title
+				img(src="../img/green-mail.png")
+				p Подписаться на рассылку
+			form(method="post")
+				input.require(type="text" name="name" placeholder="Имя")
+				input.require(type="text" name="name" placeholder="E-mail")
+				.error Ошибка отправки. Необходимо заполнить все поля
+				input(type="submit" value="Отправить")
+				.sucsess
+					p.
+						Спасибо.#[br]
+						Вы подписаны#[br] 
+						на рассылку.
+						
