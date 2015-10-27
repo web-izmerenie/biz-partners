@@ -22,7 +22,7 @@ module.exports.init = ->
 		do $sucsessMessage.hide
 		$errorMessage.slideUp(speedAnimation)
 		$overlay.fadeOut(speedAnimation)
-		do $form['0'].reset
+		do $form.trigger 'reset'
 
 	$callWindow.click (e) ->
 		id = $(@).attr 'href'

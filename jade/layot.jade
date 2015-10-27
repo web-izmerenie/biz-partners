@@ -92,3 +92,22 @@ html(lang="ru")
 						«Спасибо за заявку.#[br]
 						Мы свяжемся с вами
 						в течение часа».
+						
+		.module-window#writeme
+			.title
+				img(src="../img/green-mail.png")
+				p Написать нам
+			form(method="post")
+				input.require(type="text" name="name" placeholder="Имя")
+				input.require(type="text" name="name" placeholder="E-mail")
+				input.require(type="text" name="name" placeholder="Телефон")
+				textarea.require(name="text" placeholder="Текст письма")
+				.error Ошибка отправки. Необходимо заполнить все поля
+				input(type="submit" value="Отправить")
+				.sucsess
+					p.
+						Спасибо за ваше
+						сообщение.#[br] 
+						Мы рассмотрим 
+						и свяжемся с вами.
+						
