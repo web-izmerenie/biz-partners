@@ -1,5 +1,8 @@
 extends ./layot.jade
 
+block config
+	- var main = "main-page"
+
 block content
 	section.main-catalog
 		.wrapper
@@ -10,31 +13,31 @@ block content
 			ul
 				li
 					a(href='#')
-						img(src="../img/catalog1.png")
+						img(src="#{tplPath}/img/catalog1.png")
 						.text Бухгалтерский и налоговый учет
 				li
 					a(href='#')
-						img(src="../img/catalog2.png")
+						img(src="#{tplPath}/img/catalog2.png")
 						.text Корпоративные юридические услуги
 				li
 					a(href='#')
-						img(src="../img/catalog3.png")
+						img(src="#{tplPath}/img/catalog3.png")
 						.text Кадровое делопроизводство
 				li
 					a(href='#')
-						img(src="../img/catalog4.png")
+						img(src="#{tplPath}/img/catalog4.png")
 						.text Аудит
 				li
 					a(href='#')
-						img(src="../img/catalog5.png")
+						img(src="#{tplPath}/img/catalog5.png")
 						.text Подбор персонала
 				li
 					a(href='#')
-						img(src="../img/catalog6.png")
+						img(src="#{tplPath}/img/catalog6.png")
 						.text Безопасность труда на производстве
 				li
 					a(href='#')
-						img(src="../img/catalog7.png")
+						img(src="#{tplPath}/img/catalog7.png")
 						.text Услуги для физических лиц
 				li
 					.more-text.
@@ -49,18 +52,18 @@ block content
 			
 			ul
 				li
-					img(src="../img/main-adventure-1.png")
+					img(src="#{tplPath}/img/main-adventure-1.png")
 					.text Строгое соблюдение всех сроков: от текущих вопросов до отчетности.
 				li
-					img(src="../img/main-adventure-2.png")
+					img(src="#{tplPath}/img/main-adventure-2.png")
 					.text Финансовая ответственность за предложенные решения.
 				li
-					img(src="../img/main-adventure-3.png")
+					img(src="#{tplPath}/img/main-adventure-3.png")
 					.text.
 						Профессионализм и опытность сотрудников – более 10 лет опыта
 						#[br] работы.
 				li
-					img(src="../img/main-adventure-4.png")
+					img(src="#{tplPath}/img/main-adventure-4.png")
 					.text Вы платите только за необходимые вам услуги.
 					
 	section.main-news
@@ -107,6 +110,6 @@ block content
 		.wrapper
 			h1 Партнеры компании «Biz Partners»
 			ul
-				li: img(src="../img/partners.png")
-				li: img(src="../img/partners.png")
-				li: img(src="../img/partners.png")
+				li: img(src="#{tplPath}/img/partners.png")
+				li: img(src="#{tplPath}/img/partners.png")
+				li: img(src="#{tplPath}/img/partners.png")

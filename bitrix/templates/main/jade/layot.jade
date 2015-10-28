@@ -1,4 +1,5 @@
-- var main = "main-page"
+- var main = ""
+- var tplPath = "../bitrix/templates/main";
 block config
 
 doctype
@@ -11,8 +12,8 @@ html(lang="ru")
 		meta(name="description" content="")
 		meta(name="keywords" content="")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
-		link(rel='stylesheet', href='../styles/build/build.css')
-		script(type='text/javascript', src='../scripts/build/build.js')
+		link(rel='stylesheet', href='#{tplPath}/styles/build/build.css')
+		script(type='text/javascript', src='#{tplPath}/scripts/build/build.js')
 		
 	body
 		header
@@ -79,7 +80,7 @@ html(lang="ru")
 		.overlay
 		.module-window#callme
 			.title
-				img(src="../img/green-call.png")
+				img(src="#{tplPath}/img/green-call.png")
 				p Заказать звонок
 			form(method="post")
 				input.require(type="text" name="name" placeholder="Имя")
@@ -95,7 +96,7 @@ html(lang="ru")
 						
 		.module-window#writeme
 			.title
-				img(src="../img/green-mail.png")
+				img(src="#{tplPath}/img/green-mail.png")
 				p Написать нам
 			form(method="post")
 				input.require(type="text" name="name" placeholder="Имя")
@@ -113,7 +114,7 @@ html(lang="ru")
 						
 		.module-window#rss
 			.title
-				img(src="../img/green-mail.png")
+				img(src="#{tplPath}/img/green-mail.png")
 				p Подписаться на рассылку
 			form(method="post")
 				input.require(type="text" name="name" placeholder="Имя")
