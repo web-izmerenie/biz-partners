@@ -48,4 +48,4 @@ gulp.task('watch', ['jade', 'styles', 'coffee'], function () {
 	gulp.watch('./scripts/src/**/*.coffee', ['coffee']);
 });
 
-gulp.task('default', ['connect', 'jade', 'styles', 'coffee']);
+gulp.task('default', ['jade', 'styles', 'coffee']);
