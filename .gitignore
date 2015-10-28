@@ -28,6 +28,7 @@ styles/build
 scripts/build
 .DS_Store
 bower
+webstat
 
 # bitrix tmp dirs
 bitrix/cache
