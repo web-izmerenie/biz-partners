@@ -2,8 +2,11 @@
 if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	die();
 $tplPath = $APPLICATION->GetTemplatePath();
-$dir = $APPLICATION->GetCurDir();
 global $tplPath;
+$uri = $APPLICATION->GetCurUri();
+
+if(defined("ERROR_404"))
+	$mainClass = "not-found";
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -21,91 +24,91 @@ global $tplPath;
 		<header>
 			<div class="wrapper">
 				<div id="logo" class="column">
-					<?if($dir == "/"){?>
+					<?if($uri == "/" || $uri == "/index.php"){?>
 						<div class="logo"></div>
 					<?}else{?>
 						<a href="/" class="logo"></a>
 					<?}?>
 				</div>
 				<?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"main_menu", 
-	array(
-		"ALLOW_MULTI_SELECT" => "N",
-		"CHILD_MENU_TYPE" => "left",
-		"COMPONENT_TEMPLATE" => "main_menu",
-		"DELAY" => "N",
-		"MAX_LEVEL" => "1",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "A",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"ROOT_MENU_TYPE" => "top",
-		"USE_EXT" => "N"
-	),
-	false
-);?>
+					"bitrix:menu",
+					"main_menu",
+					array(
+						"ALLOW_MULTI_SELECT" => "N",
+						"CHILD_MENU_TYPE" => "left",
+						"COMPONENT_TEMPLATE" => "main_menu",
+						"DELAY" => "N",
+						"MAX_LEVEL" => "1",
+						"MENU_CACHE_GET_VARS" => array(
+						),
+						"MENU_CACHE_TIME" => "3600",
+						"MENU_CACHE_TYPE" => "A",
+						"MENU_CACHE_USE_GROUPS" => "Y",
+						"ROOT_MENU_TYPE" => "top",
+						"USE_EXT" => "N"
+					),
+					false
+				);?>
 				<div id="contacts" class="column">
 					<?$APPLICATION->IncludeComponent(
-	"bitrix:news.detail", 
-	"header_tel_present", 
-	array(
-		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"ADD_ELEMENT_CHAIN" => "N",
-		"ADD_SECTIONS_CHAIN" => "N",
-		"AJAX_MODE" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"BROWSER_TITLE" => "-",
-		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"CHECK_DATES" => "Y",
-		"COMPONENT_TEMPLATE" => "header_tel_present",
-		"DETAIL_URL" => "",
-		"DISPLAY_BOTTOM_PAGER" => "Y",
-		"DISPLAY_DATE" => "Y",
-		"DISPLAY_NAME" => "Y",
-		"DISPLAY_PICTURE" => "Y",
-		"DISPLAY_PREVIEW_TEXT" => "Y",
-		"DISPLAY_TOP_PAGER" => "N",
-		"ELEMENT_CODE" => "",
-		"ELEMENT_ID" => "1",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"IBLOCK_ID" => "1",
-		"IBLOCK_TYPE" => "content",
-		"IBLOCK_URL" => "",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-		"MESSAGE_404" => "",
-		"META_DESCRIPTION" => "-",
-		"META_KEYWORDS" => "-",
-		"PAGER_BASE_LINK_ENABLE" => "N",
-		"PAGER_SHOW_ALL" => "N",
-		"PAGER_TEMPLATE" => ".default",
-		"PAGER_TITLE" => "Страница",
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "ATT_FILE",
-		),
-		"SET_BROWSER_TITLE" => "N",
-		"SET_CANONICAL_URL" => "N",
-		"SET_LAST_MODIFIED" => "N",
-		"SET_META_DESCRIPTION" => "N",
-		"SET_META_KEYWORDS" => "N",
-		"SET_STATUS_404" => "N",
-		"SET_TITLE" => "N",
-		"SHOW_404" => "N",
-		"USE_PERMISSIONS" => "N",
-		"USE_SHARE" => "N"
-	),
-	false
-);?>
+						"bitrix:news.detail",
+						"header_tel_present",
+						array(
+							"ACTIVE_DATE_FORMAT" => "d.m.Y",
+							"ADD_ELEMENT_CHAIN" => "N",
+							"ADD_SECTIONS_CHAIN" => "N",
+							"AJAX_MODE" => "N",
+							"AJAX_OPTION_ADDITIONAL" => "",
+							"AJAX_OPTION_HISTORY" => "N",
+							"AJAX_OPTION_JUMP" => "N",
+							"AJAX_OPTION_STYLE" => "Y",
+							"BROWSER_TITLE" => "-",
+							"CACHE_GROUPS" => "Y",
+							"CACHE_TIME" => "36000000",
+							"CACHE_TYPE" => "A",
+							"CHECK_DATES" => "Y",
+							"COMPONENT_TEMPLATE" => "header_tel_present",
+							"DETAIL_URL" => "",
+							"DISPLAY_BOTTOM_PAGER" => "Y",
+							"DISPLAY_DATE" => "Y",
+							"DISPLAY_NAME" => "Y",
+							"DISPLAY_PICTURE" => "Y",
+							"DISPLAY_PREVIEW_TEXT" => "Y",
+							"DISPLAY_TOP_PAGER" => "N",
+							"ELEMENT_CODE" => "",
+							"ELEMENT_ID" => "1",
+							"FIELD_CODE" => array(
+								0 => "",
+								1 => "",
+							),
+							"IBLOCK_ID" => "1",
+							"IBLOCK_TYPE" => "content",
+							"IBLOCK_URL" => "",
+							"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+							"MESSAGE_404" => "",
+							"META_DESCRIPTION" => "-",
+							"META_KEYWORDS" => "-",
+							"PAGER_BASE_LINK_ENABLE" => "N",
+							"PAGER_SHOW_ALL" => "N",
+							"PAGER_TEMPLATE" => ".default",
+							"PAGER_TITLE" => "Страница",
+							"PROPERTY_CODE" => array(
+								0 => "",
+								1 => "ATT_FILE",
+							),
+							"SET_BROWSER_TITLE" => "N",
+							"SET_CANONICAL_URL" => "N",
+							"SET_LAST_MODIFIED" => "N",
+							"SET_META_DESCRIPTION" => "N",
+							"SET_META_KEYWORDS" => "N",
+							"SET_STATUS_404" => "N",
+							"SET_TITLE" => "N",
+							"SHOW_404" => "N",
+							"USE_PERMISSIONS" => "N",
+							"USE_SHARE" => "N"
+						),
+						false
+					);?>
 					<span class="callme">
 						<a href="#callme" class="call-window">Заказать звонок</a>
 					</span>
@@ -115,4 +118,4 @@ global $tplPath;
 				</div>
 			</div>
 		</header>
-		<main class="content main-page">
+		<main class="content <?=$mainClass;?>">
