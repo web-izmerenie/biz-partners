@@ -13,12 +13,21 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 			</p>
 		</div>
 		<div id="footer-menu" class="column">
-			<ul>
-				<li><a href="#">О компании</a></li>
-				<li><a href="#">Каталог услуг</a></li>
-				<li><a href="#">Новости</a></li>
-				<li><a href="#">Контакты</a></li>
-			</ul>
+			<?$APPLICATION->IncludeComponent("bitrix:menu", "bottom_menu", Array(
+	"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+		"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
+		"COMPONENT_TEMPLATE" => ".default",
+		"DELAY" => "N",	// Откладывать выполнение шаблона меню
+		"MAX_LEVEL" => "1",	// Уровень вложенности меню
+		"MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
+		"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
+		"MENU_CACHE_TYPE" => "A",	// Тип кеширования
+		"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
+		"ROOT_MENU_TYPE" => "bottom",	// Тип меню для первого уровня
+		"USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+	),
+	false
+);?>
 			<ul>
 				<li>Каталог услуг</li>
 				<li><a href="#">Бухгалтерский и налоговыйучет</a></li>
