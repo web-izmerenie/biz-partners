@@ -12,10 +12,12 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<h2>Новости</h2>
+<h2><?=$arResult['NAME'];?></h2>
 <?foreach($arResult['ITEMS'] as $arItem){?>
 	<p class="date"><?=$arItem['DISPLAY_ACTIVE_FROM'];?></p>
 	<a href="<?=$arItem['DETAIL_PAGE_URL'];?>"><?=$arItem['NAME'];?></a>
 	<div class="text"><?=$arItem['PREVIEW_TEXT'];?></div>
 <?}?>
-<a href="<?=$arResult['LIST_PAGE_URL'];?>" class="news-link">Все новости</a>
+<?if($arResult['CODE'] == 'news'){?>
+	<a href="<?=$arResult['LIST_PAGE_URL'];?>" class="news-link">Все новости</a>
+<?}?>
