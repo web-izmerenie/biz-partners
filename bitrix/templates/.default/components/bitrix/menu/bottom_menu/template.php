@@ -4,7 +4,7 @@
 	<ul>
 		<?foreach($arResult as $arItem){?>
 			<li>
-				<a href="<?$arItem['LINK'];?>"><?=$arItem['TEXT'];?></a>
+				<a href="<?=$arItem['LINK'];?>"><?=$arItem['TEXT'];?></a>
 			</li>
 		<?}?>
 	</ul>
