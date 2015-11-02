@@ -8,10 +8,10 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Каталог услуг", 
-		"/katalog-uslug/", 
+		"Услуги", 
+		"/uslugi/", 
 		Array(), 
-		Array(), 
+		Array("INSILDE_MENU"=>"Y"), 
 		"" 
 	),
 	Array(
