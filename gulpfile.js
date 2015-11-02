@@ -14,6 +14,10 @@ gulp.task('styles-clean', function () {
 	return gulp.src(tplPath + '/styles/build/*', { read: false })
 		.pipe(clean());
 });
+gulp.task('scripts-clean', function () {
+	return gulp.src(tplPath + '/scripts/build/*', { read: false })
+		.pipe(clean());
+});
 
 gulp.task('styles', ['styles-clean'], function () {
 	gulp.src(tplPath + '/styles/src/main.less')
@@ -29,7 +33,7 @@ gulp.task('jade', function () {
 		.pipe(gulp.dest('./html/'));
 });
 
-gulp.task('coffee', function () {
+gulp.task('coffee', ['scripts-clean'], function () {
 	gulp.src(tplPath + '/scripts/src/main.coffee', { read: false })
 		.pipe(browserify({
 			transform: ['coffeeify'],
@@ -37,7 +41,7 @@ gulp.task('coffee', function () {
 			shim: require('./shim-browserify.json')
 		}))
 		.pipe(rename('build.js'))
-		.pipe(gulp.dest('./scripts/build/'))
+		.pipe(gulp.dest(tplPath + '/scripts/build/'))
 });
 
 gulp.task('connect', function () {
