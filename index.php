@@ -3,38 +3,33 @@ define('MAIN', 'Y');
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle("Главная");
 ?>
-<section class="main-catalog">
-	<div class="wrapper">
-		<h1>Компания «Biz Partners» ведет работу <br>
-			с иностранными и отечественными организациями, <br>
-			юридическими и физическими лицами.
-		</h1>
-		<ul>
-			<li><a href="#"><img src="../bitrix/templates/main/img/catalog1.png">
-					<div class="text">Бухгалтерский и налоговый учет</div></a></li>
-			<li><a href="#"><img src="../bitrix/templates/main/img/catalog2.png">
-					<div class="text">Корпоративные юридические услуги</div></a></li>
-			<li><a href="#"><img src="../bitrix/templates/main/img/catalog3.png">
-					<div class="text">Кадровое делопроизводство</div></a></li>
-			<li><a href="#"><img src="../bitrix/templates/main/img/catalog4.png">
-					<div class="text">Аудит</div></a></li>
-			<li><a href="#"><img src="../bitrix/templates/main/img/catalog5.png">
-					<div class="text">Подбор персонала</div></a></li>
-			<li><a href="#"><img src="../bitrix/templates/main/img/catalog6.png">
-					<div class="text">Безопасность труда на производстве</div></a></li>
-			<li><a href="#"><img src="../bitrix/templates/main/img/catalog7.png">
-					<div class="text">Услуги для физических лиц</div></a></li>
-			<li>
-				<div class="more-text">Предлагая полный цикл обслуживания, мы предоставляем как отдельные <br>
-					услуги, так и комплексные решения для вашей компании в сфере <br>
-					бухгалтерского учета, подбора персонала, юридического сопровождения и <br>
-					ведения бизнеса в целом.
+<?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "module_mainpage_catalog", Array(
+	"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+		"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+		"CACHE_TYPE" => "A",	// Тип кеширования
+		"COMPONENT_TEMPLATE" => ".default",
+		"COUNT_ELEMENTS" => "Y",	// Показывать количество элементов в разделе
+		"IBLOCK_ID" => "6",	// Инфоблок
+		"IBLOCK_TYPE" => "content",	// Тип инфоблока
+		"SECTION_CODE" => "",	// Код раздела
+		"SECTION_FIELDS" => array(	// Поля разделов
+			0 => "",
+			1 => "",
+		),
+		"SECTION_ID" => $_REQUEST["SECTION_ID"],	// ID раздела
+		"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
+		"SECTION_USER_FIELDS" => array(	// Свойства разделов
+			0 => "",
+			1 => "",
+		),
+		"SHOW_PARENT_NAME" => "Y",	// Показывать название раздела
+		"TOP_DEPTH" => "2",	// Максимальная отображаемая глубина разделов
+		"VIEW_MODE" => "LINE",	// Вид списка подразделов
+	),
+	false
+);?>
 
-				</div>
-			</li>
-		</ul>
-	</div>
-</section>
 <section class="main-advenurage">
 	<div class="wrapper">
 		<h1>Преимущества компании «Biz Partneers»</h1>
@@ -118,8 +113,8 @@ $APPLICATION->SetTitle("Главная");
 		</div>
 		<div class="column">
 			<?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"module_news_main", 
+	"bitrix:news.list",
+	"module_news_main",
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
