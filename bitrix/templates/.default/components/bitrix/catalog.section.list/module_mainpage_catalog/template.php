@@ -19,9 +19,12 @@ $this->setFrameMode(true);?>
 			юридическими и физическими лицами.
 		</h1>
 		<ul>
-			<?foreach($arResult['SECTIONS'] as $arSection){?>
+			<?foreach($arResult['SECTIONS'] as $arSection){
+				$photo = CFile::ResizeImageGet($arSection['PICTURE'],
+					array('width'=>51, 'height'=>59),
+					BX_RESIZE_IMAGE_PROPORTIONAL, true);?>
 				<li><a href="<?=$arSection['SECTION_PAGE_URL'];?>">
-					<img src="<?=$arSection['PICTURE']['SRC']?>" alt="<?=$arSection['PICTURE']['ALT']?>">
+					<img src="<?=$photo['src'];?>" alt="<?=$arSection['PICTURE']['ALT']?>">
 					<div class="text"><?=$arSection['NAME'];?></div></a>
 				</li>
 			<?}?>

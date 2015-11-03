@@ -8,7 +8,9 @@ $uri = $APPLICATION->GetCurUri();
 if(defined("ERROR_404"))
 	$mainClass = "not-found";
 if(defined("MAIN"))
-	$mainClass ="main-page";
+	$mainClass = "main-page";
+if(defined("CATALOG"))
+	$mainClass = "catalog";
 ?>
 <!DOCTYPE html>
 <html lang="ru">

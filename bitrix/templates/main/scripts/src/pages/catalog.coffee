@@ -14,15 +14,17 @@ module.exports.init = ->
 	$sectionslist = $main.find '.catalog-sections'
 	$items = $sectionslist.find '.item'
 	$link = $items.find '> a'
-	$img = null
-	$src = null
+	$orig = null
+	$hover = null
 
 	$link.hover(
 		->
-			$img = $(@).find '> img'
-			$src = $img.attr 'src'
+			$orig = $(@).find '.original'
+			$hover = $(@).find '.hover'
 
-			$img.attr('src', $img.data('hover'))
+			do $orig.hide
+			do $hover.show
 		->
-			$img.attr('src', $src)
+			do $hover.hide
+			do $orig.show
 	)
