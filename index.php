@@ -1,5 +1,6 @@
 <?
 define('MAIN', 'Y');
+define('NO_WRAP', 'Y');
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle("Главная");
 ?>

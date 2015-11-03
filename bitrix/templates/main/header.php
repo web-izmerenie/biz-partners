@@ -121,3 +121,7 @@ if(defined("MAIN"))
 			</div>
 		</header>
 		<main class="content <?=$mainClass;?>">
+			<?if(!defined('NO_WRAP')){?>
+				<div class="wrapper">
+					<h1><?$APPLICATION->ShowTitle(false)?></h1>
+			<?}?>
