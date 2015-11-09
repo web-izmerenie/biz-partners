@@ -15,6 +15,8 @@ if(defined("CATALOG_SECTION"))
 	$mainClass = "catalog-section";
 if(defined("CATALOG_DETAIL"))
 	$mainClass = "catalog-detail";
+if(defined("CONTACTS"))
+	$mainClass = "contacts";
 ?>
 <!DOCTYPE html>
 <html lang="ru">
