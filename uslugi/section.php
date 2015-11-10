@@ -160,8 +160,8 @@ $APPLICATION->SetTitle("section");
 	false
 );?>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"inner_news_module", 
+	"bitrix:news.list",
+	"inner_news_module",
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
