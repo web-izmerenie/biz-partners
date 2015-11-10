@@ -127,13 +127,13 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 </footer>
 <div class="overlay"></div>
 <div id="callme" class="module-window">
-	<div class="title"><img src="../bitrix/templates/main/img/green-call.png">
+	<div class="title"><img src="<?=$tplPath;?>img/green-call.png">
 		<p>Заказать звонок</p>
 	</div>
-	<form method="post">
+	<form method="post" data-send="<?=$tplPath;?>ajax/send_call_me.php">
 		<input type="text" name="name" placeholder="Имя" class="require">
-		<input type="text" name="name" placeholder="Телефон" class="require">
-		<input type="text" name="name" placeholder="Удобное для вас время" class="require">
+		<input type="text" name="tel" placeholder="Телефон" class="require">
+		<input type="text" name="time" placeholder="Удобное для вас время" class="require">
 		<div class="error">Ошибка отправки. Необходимо заполнить все поля</div>
 		<input type="submit" value="Отправить">
 		<div class="sucsess">
@@ -146,13 +146,13 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	</form>
 </div>
 <div id="writeme" class="module-window">
-	<div class="title"><img src="../bitrix/templates/main/img/green-mail.png">
+	<div class="title"><img src="<?=$tplPath;?>img/green-mail.png">
 		<p>Написать нам</p>
 	</div>
-	<form method="post">
+	<form method="post" data-send="<?=$tplPath;?>ajax/send_write_me.php">
 		<input type="text" name="name" placeholder="Имя" class="require">
-		<input type="text" name="name" placeholder="E-mail" class="require">
-		<input type="text" name="name" placeholder="Телефон" class="require">
+		<input type="text" name="email" placeholder="E-mail" class="require">
+		<input type="text" name="tel" placeholder="Телефон" class="require">
 		<textarea name="text" placeholder="Текст письма" class="require"></textarea>
 		<div class="error">Ошибка отправки. Необходимо заполнить все поля</div>
 		<input type="submit" value="Отправить">

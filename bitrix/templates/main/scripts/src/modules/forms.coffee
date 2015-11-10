@@ -22,7 +22,8 @@ module.exports.init = ->
 		do $sucsessMessage.hide
 		$errorMessage.slideUp(speedAnimation)
 		$overlay.fadeOut(speedAnimation)
-		do $form.trigger 'reset'
+		$form.trigger 'reset'
+		return
 
 	$callWindow.click (e) ->
 		id = $(@).attr 'href'
@@ -35,6 +36,11 @@ module.exports.init = ->
 		input = $(@).find '.require'
 		errorMessage = $(@).find '.error'
 		sucsessMessage = $(@).find '.sucsess'
+		$tel = $(@).find 'input[name="tel"]'
+		regTel = /^[+]{0,1}[- (),0-9]{7,}$/
+		$mail = $(@).find 'input[name="email"]'
+		regMail = /^([0-9a-zA-Z]([-.w]*[0-9a-zA-Z])*@[0-9a-zA-Z]([-.w]*[0-9a-zA-Z])+[a-zA-Z])$/
+		$sendUrl = $(@).data 'send'
 
 		do e.preventDefault
 
@@ -42,13 +48,28 @@ module.exports.init = ->
 			$(@).val '' if $(@).val().replace(/\s/g, '') == ''
 			error = true if $(@).val() == ''
 
+		if $tel.length == 1
+			if regTel.test($tel.val()) == false
+				error = true
+
+		if $mail.length == 1
+			if regMail.test($mail.val()) == false
+				error = true
+
 		if error
 			errorMessage.slideDown(speedAnimation)
 		else
-			errorMessage.slideUp(speedAnimation)
-			sucsessMessage.css
-				display: 'flex',
-				opacity: 0
-			sucsessMessage.animate
-				opacity: 1
-				speedAnimation
+			$.ajax
+				type: "POST"
+				url: $sendUrl
+				data: $(@).serialize()
+				error: (jqXHR, textStatus, errorThrown) ->
+					alert 'Ошибка при отправке #{textStatus}'
+				success: ->
+					errorMessage.slideUp(speedAnimation)
+					sucsessMessage.css
+						display: 'flex',
+						opacity: 0
+					sucsessMessage.animate
+						opacity: 1
+						speedAnimation
