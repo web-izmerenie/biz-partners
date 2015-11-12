@@ -10,12 +10,16 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-$this->setFrameMode(true);
+$this->setFrameMode(true);?>
 
-foreach ($arResult['ITEMS'] as $k => $arItem){
-	$val_element = $arItem['DISPLAY_PROPERTIES']['ATT_ICON']['VALUE'];
-	$file = CFile::GetFileArray($arItem['DISPLAY_PROPERTIES']['ATT_ICON']
-		['LINK_ELEMENT_VALUE'][$val_element]['PREVIEW_PICTURE']);
-
-	$arResult['ITEMS'][$k]['ICON'] = $file;
-}
+<section class="sections">
+	<div class="wrapper">
+		<ul>
+			<?foreach($arResult['SECTIONS'] as $arSection){?>
+				<li <?if($arSection['CODE'] == $_REQUEST['SECTION_CODE']){?>class="active"<?}?>>
+					<a href="<?=$arSection['SECTION_PAGE_URL'];?>"><?=$arSection['NAME'];?></a>
+				</li>
+			<?}?>
+		</ul>
+	</div>
+</section>

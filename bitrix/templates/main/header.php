@@ -19,6 +19,12 @@ if(defined("CONTACTS"))
 	$mainClass = "contacts";
 if(defined("ABOUT"))
 	$mainClass = "about";
+if(defined("CHANGE"))
+	$mainClass = "change-legislation";
+if(defined("CHANGE_ITEM"))
+	$mainClass = "change-item";
+if(defined("NEWS_ITEM"))
+	$mainClass = "news-item";
 ?>
 <!DOCTYPE html>
 <html lang="ru">

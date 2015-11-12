@@ -1,0 +1,48 @@
+@import "../mixins.less";
+
+.pager{
+	margin: 7px 0 0;
+	height: 32px;
+
+	.wrapper{
+		position: relative;
+		padding: 0;
+
+		ul{
+			display: table;
+			margin: 0 auto;
+
+			li{
+				display: inline-block;
+				margin-right: 6px;
+
+				&:last-child{margin-right:  0px;}
+
+				a{
+					font-size: 21px;
+					font-family: roboto-m;
+					text-decoration: none;
+				}
+
+				.active{ color: #aacc33; }
+			}//li
+		}//ul
+
+		.arrow{
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 22px;
+			height: 36px;
+			.bg('arrows.png', no-repeat);
+		}
+
+		.next{
+			left: auto;
+			right: 25px;
+			background-position: -24px 0;
+		}
+	}
+}//pager
