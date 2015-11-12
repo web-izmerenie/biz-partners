@@ -24,6 +24,12 @@ $arUrlRewrite = array(
 		"ID" => "bitrix:catalog.section",
 		"PATH" => "/uslugi/section.php",
 	),
+	array(
+		"CONDITION" => "#^/novosti/([^/]+?).php\\??(.*)#",
+		"RULE" => "ELEMENT_CODE=\$1&\$2",
+		"ID" => "",
+		"PATH" => "/novosti/detail.php",
+	),
 );
 
 ?>

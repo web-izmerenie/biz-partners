@@ -31,7 +31,5 @@ if($_POST['name'] and $_POST['tel'] and $_POST['time']){
 
 	if(CModule::includeModule("main")){
 		CEvent::Send("SEND_CALL_ME", "s1", $arEventFields);
-		print 'Отправлено';
-		print_r($_POST);
 	}
 }

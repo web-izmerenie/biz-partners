@@ -11,6 +11,10 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+if(empty($arResult['SECTION']['PATH']))
+	$backLink = $arResult['LIST_PAGE_URL'];
+else
+	$backLink = $arResult['SECTION']['PATH'][0]['SECTION_PAGE_URL'];
 ?>
 <article>
 	<div class="wrapper">
@@ -21,19 +25,19 @@ $this->setFrameMode(true);
 			<?=$arResult['DETAIL_TEXT'];?>
 		</div>
 		<div class="bottom-article">
-			<a href="<?=$arResult['SECTION']['PATH'][0]['SECTION_PAGE_URL'];?>" class="back">
-				Читать все изменения в законодательстве списком
-			</a>
-			<div class="source">
-				Источник:
-				<a href="<?=$arResult['PROPERTIES']['ATT_LINK']['VALUE']?>" target="_blank">
-					<?if(!empty($arResult['PROPERTIES']['ATT_LINK']['DESCRIPTION'])){
-						print $arResult['PROPERTIES']['ATT_LINK']['DESCRIPTION'];
-					}else{
-						print $arResult['PROPERTIES']['ATT_LINK']['VALUE'];
-					}?>
-				</a>
-			</div>
+			<a href="<?=$backLink?>" class="back"><?=$arParams['BACK_LINK'];?></a>
+			<?if(!empty($arResult['PROPERTIES']['ATT_LINK']['VALUE'])){?>
+				<div class="source">
+					Источник:
+					<a href="<?=$arResult['PROPERTIES']['ATT_LINK']['VALUE']?>" target="_blank">
+						<?if(!empty($arResult['PROPERTIES']['ATT_LINK']['DESCRIPTION'])){
+							print $arResult['PROPERTIES']['ATT_LINK']['DESCRIPTION'];
+						}else{
+							print $arResult['PROPERTIES']['ATT_LINK']['VALUE'];
+						}?>
+					</a>
+				</div>
+			<?}?>
 		</div>
 	</div>
 </article>

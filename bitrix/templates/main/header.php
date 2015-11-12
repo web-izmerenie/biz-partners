@@ -5,26 +5,32 @@ $tplPath = $APPLICATION->GetTemplatePath();
 global $tplPath;
 $uri = $APPLICATION->GetCurUri();
 
+$mainClass = array();
+
 if(defined("ERROR_404"))
-	$mainClass = "not-found";
+	$mainClass[] = "not-found";
 if(defined("MAIN"))
-	$mainClass = "main-page";
+	$mainClass[] = "main-page";
 if(defined("CATALOG"))
-	$mainClass = "catalog";
+	$mainClass[] = "catalog";
 if(defined("CATALOG_SECTION"))
-	$mainClass = "catalog-section";
+	$mainClass[] = "catalog-section";
 if(defined("CATALOG_DETAIL"))
-	$mainClass = "catalog-detail";
+	$mainClass[] = "catalog-detail";
 if(defined("CONTACTS"))
-	$mainClass = "contacts";
+	$mainClass[] = "contacts";
 if(defined("ABOUT"))
-	$mainClass = "about";
+	$mainClass[] = "about";
 if(defined("CHANGE"))
-	$mainClass = "change-legislation";
+	$mainClass[] = "change-legislation";
+if(defined("NEWS"))
+	$mainClass[] = "news";
 if(defined("CHANGE_ITEM"))
-	$mainClass = "change-item";
+	$mainClass[] = "change-item";
 if(defined("NEWS_ITEM"))
-	$mainClass = "news-item";
+	$mainClass[] = "news-item";
+
+$mainClass = implode(" ", $mainClass);
 ?>
 <!DOCTYPE html>
 <html lang="ru">

@@ -11,6 +11,7 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+$GLOBALS['SECTION_ID'] = $arResult['SECTION']['PATH'][0]['ID'];
 ?>
 <section class="items">
 	<div class="wrapper">

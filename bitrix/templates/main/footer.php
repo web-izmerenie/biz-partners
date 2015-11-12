@@ -168,12 +168,13 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	</form>
 </div>
 <div id="rss" class="module-window">
-	<div class="title"><img src="../bitrix/templates/main/img/green-mail.png">
+	<div class="title"><img src="<?=$tplPath;?>img/green-mail.png">
 		<p>Подписаться на рассылку</p>
 	</div>
-	<form method="post">
+	<form method="post" data-send="<?=$tplPath;?>ajax/send_rss.php">
 		<input type="text" name="name" placeholder="Имя" class="require">
-		<input type="text" name="name" placeholder="E-mail" class="require">
+		<input type="text" name="email" placeholder="E-mail" class="require">
+		<input type="hidden" name="section_id" value="<?=$GLOBALS['SECTION_ID'];?>">
 		<div class="error">Ошибка отправки. Необходимо заполнить все поля</div>
 		<input type="submit" value="Отправить">
 		<div class="sucsess">
