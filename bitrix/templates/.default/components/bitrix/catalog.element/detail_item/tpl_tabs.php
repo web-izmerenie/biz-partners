@@ -12,10 +12,14 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);?>
 
-<h2>Вам необходимы наши услуги, если вы:</h2>
+<h2>Вам необходимы наши услуги, если:</h2>
 <ol>
 	<?foreach($arResult['PROPERTIES']['ATT_NUMBER_LIST']['~VALUE'] as $arNumb){?>
-		<li><?=$arNumb['TEXT'];?></li>
+		<li>
+			<div class="container">
+				<?=$arNumb['TEXT'];?>
+			</div>
+		</li>
 	<?}?>
 </ol>
 <?if(!empty($arResult['PROPERTIES']['ATT_TABS']['VALUE'])){?>

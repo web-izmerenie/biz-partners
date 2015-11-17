@@ -11,10 +11,11 @@ $ = require 'jquery'
 module.exports.init = ->
 	$main = $ '#menu'
 	$mainItems = $main.find 'li'
+	speedAnimation = 300
 
 	$mainItems.hover(
 		->
-				$(@).find('ul').stop( true, true ).fadeIn()
+				$(@).find('ul').slideDown(speedAnimation)
 		->
-			$(@).find('ul').stop( true, true ).fadeOut()
+			$(@).find('ul').slideUp(speedAnimation)
 	)

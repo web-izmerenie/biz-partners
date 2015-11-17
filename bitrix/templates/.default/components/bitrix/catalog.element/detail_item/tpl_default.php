@@ -15,14 +15,22 @@ $this->setFrameMode(true);?>
 	<h2>Услуга включает в себя:</h2>
 	<ul>
 		<?foreach($arResult['PROPERTIES']['ATT_INCLUDE_SRVICES']['~VALUE'] as $arList){?>
-			<li><?=$arList['TEXT'];?></li>
+			<li>
+				<div class="container">
+					<?=$arList['TEXT'];?>
+				</div>
+			</li>
 		<?}?>
 	</ul>
 </div>
-<h2>Вам необходимы наши услуги, если вы:</h2>
+<h2>Вам необходимы наши услуги, если:</h2>
 <ol>
 	<?foreach($arResult['PROPERTIES']['ATT_NUMBER_LIST_NO_TABS']['~VALUE'] as $arNumb){?>
-		<li><?=$arNumb['TEXT'];?></li>
+		<li>
+			<div class="container">
+				<?=$arNumb['TEXT'];?>
+			</div>
+		</li>
 	<?}?>
 </ol>
 <div class="tabs visible">

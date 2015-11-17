@@ -20,7 +20,9 @@ $this->setFrameMode(true);
 				$icon = CFile::ResizeImageGet($arItem['ICON'],
 					array('width'=>66, 'height'=>54), BX_RESIZE_IMAGE_PROPORTIONAL, true);?>
 				<li>
-					<img src="<?=$icon['src'];?>">
+					<div class="img">
+						<img src="<?=$icon['src'];?>">
+					</div>
 					<p><?=$arItem['NAME'];?></p>
 					<div class="text"><?=$arItem['PREVIEW_TEXT'];?></div>
 				</li>

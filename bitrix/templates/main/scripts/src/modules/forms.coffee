@@ -15,7 +15,7 @@ module.exports.init = ->
 	$form = $moduleWindow.find 'form'
 	$errorMessage = $form.find '.error'
 	$sucsessMessage = $form.find '.sucsess'
-	speedAnimation = 500
+	speedAnimation = 300
 
 	$overlay.click ->
 		do $moduleWindow.hide
@@ -29,7 +29,8 @@ module.exports.init = ->
 		id = $(@).attr 'href'
 
 		do e.preventDefault
-		$overlay.fadeIn(speedAnimation, -> $(id).show())
+		$overlay.fadeIn(speedAnimation)
+		$(id).fadeIn(speedAnimation)
 
 	$form.submit (e) ->
 		error = false
