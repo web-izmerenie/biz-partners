@@ -38,6 +38,14 @@ $this->setFrameMode(true);?>
 	<div class="row">
 		<div id="price" class="column">
 			<?=$arResult['PROPERTIES']['ATT_TEXT_BOX']['~VALUE']['TEXT'];?>
+			<?if(!empty($arResult['PROPERTIES']['ATT_FILE']['DESCRIPTION'])){?>
+				<div class="file">
+					<span>Подробно об услуге и стоимости:</span>
+					<a href="<?=$arResult['DISPLAY_PROPERTIES']['ATT_FILE']['FILE_VALUE']['SRC'];?>" target="_blank">
+						<?=$arResult['PROPERTIES']['ATT_FILE']['DESCRIPTION'];?>
+					</a>
+				</div>
+			<?}?>
 		</div>
 		<div id="tel" class="column"><span>Узнать подробности по телефону:</span>
 			<p><?=$arResult['PROPERTIES']['ATT_TEL']['VALUE']?></p>

@@ -32,7 +32,7 @@ $this->setFrameMode(true);
 					<?if(!empty($arItem['PROPERTIES']['ATT_FILE']['DESCRIPTION'])){?>
 						<div class="file">
 							<span>Подробно об услуге и стоимости:</span>
-							<a href="<?=$arItem['DISPLAY_PROPERTIES']['ATT_FILE']['FILE_VALUE']['SRC'];?>">
+							<a href="<?=$arItem['DISPLAY_PROPERTIES']['ATT_FILE']['FILE_VALUE']['SRC'];?>" target="_blank">
 								<?=$arItem['PROPERTIES']['ATT_FILE']['DESCRIPTION'];?>
 							</a>
 						</div>

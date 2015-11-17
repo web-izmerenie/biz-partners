@@ -85,9 +85,9 @@ $APPLICATION->SetTitle("detail");
 		"USE_PRODUCT_QUANTITY" => "N"
 	)
 );?> <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.element", 
-	"detail_item", 
-	array(
+	"bitrix:catalog.element",
+	"detail_item",
+	Array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_DETAIL_TO_SLIDER" => "N",
 		"ADD_ELEMENT_CHAIN" => "N",
@@ -127,25 +127,20 @@ $APPLICATION->SetTitle("detail");
 		"META_KEYWORDS" => "-",
 		"OFFERS_LIMIT" => "0",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
-		"PRICE_CODE" => array(
-		),
+		"PRICE_CODE" => array(),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRICE_VAT_SHOW_VALUE" => "N",
 		"PRODUCT_ID_VARIABLE" => "id",
-		"PRODUCT_PROPERTIES" => array(
-		),
+		"PRODUCT_PROPERTIES" => array(),
 		"PRODUCT_PROPS_VARIABLE" => "prop",
 		"PRODUCT_QUANTITY_VARIABLE" => "",
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"PROPERTY_CODE" => array("","ATT_FILE"),
 		"SECTION_CODE" => $_REQUEST["SECTION_CODE"],
 		"SECTION_CODE_PATH" => "",
 		"SECTION_ID" => "",
 		"SECTION_ID_VARIABLE" => "SECTION_CODE",
 		"SECTION_URL" => "",
-		"SEF_MODE" => "Y",
+		"SEF_MODE" => "N",
 		"SEF_RULE" => "/uslugi/#SECTION_CODE#/#ELEMENT_CODE#.php",
 		"SET_BROWSER_TITLE" => "N",
 		"SET_CANONICAL_URL" => "N",
@@ -164,8 +159,7 @@ $APPLICATION->SetTitle("detail");
 		"USE_PRICE_COUNT" => "N",
 		"USE_PRODUCT_QUANTITY" => "N",
 		"USE_VOTE_RATING" => "N"
-	),
-	false
+	)
 );?> <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"list_choise",

@@ -19,7 +19,7 @@ $this->setFrameMode(true);
 			<?foreach($arResult['ITEMS'] as $arItem){?>
 				<li>
 					<time><?=$arItem['DISPLAY_ACTIVE_FROM'];?></time>
-					<a href="#"><?=$arItem['NAME'];?></a>
+					<a href="<?=$arItem['DETAIL_PAGE_URL'];?>"><?=$arItem['NAME'];?></a>
 					<div class="text"><?=$arItem['PREVIEW_TEXT'];?></div>
 				</li>
 			<?}?>

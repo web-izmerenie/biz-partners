@@ -38,7 +38,7 @@ module.exports.init = ->
 		errorMessage = $(@).find '.error'
 		sucsessMessage = $(@).find '.sucsess'
 		$tel = $(@).find 'input[name="tel"]'
-		regTel = /^[+]{0,1}[- (),0-9]{7,}$/
+		regTel = /^[+]{0,1}[- (),0-9]{5,}$/
 		$mail = $(@).find 'input[name="email"]'
 		regMail = /^([0-9a-zA-Z]([-.w]*[0-9a-zA-Z])*@[0-9a-zA-Z]([-.w]*[0-9a-zA-Z])+[a-zA-Z])$/
 		$sendUrl = $(@).data 'send'

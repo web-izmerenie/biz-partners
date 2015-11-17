@@ -15,7 +15,7 @@ module.exports.init = ->
 
 	$mainItems.hover(
 		->
-				$(@).find('ul').slideDown(speedAnimation)
+				$(@).find('ul').stop(true, true).slideDown(speedAnimation)
 		->
-			$(@).find('ul').slideUp(speedAnimation)
+			$(@).find('ul').stop(true, true).slideUp(speedAnimation)
 	)

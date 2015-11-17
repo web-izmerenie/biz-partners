@@ -15,7 +15,6 @@ for($index = 0, $itemSize = $num_items; $index < $itemSize; $index++)
 	}else{
 		$title = substr($title, 0, 38);
 		$title = rtrim($title, ":!?.,-");
-		$title = substr($title, 0, strrpos($title, ' '));
 		$strReturn .= '<span>'.$title.'... </span>';
 	}
 }

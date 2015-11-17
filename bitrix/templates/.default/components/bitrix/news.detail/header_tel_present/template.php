@@ -14,5 +14,5 @@ $this->setFrameMode(true);
 ?>
 <div class="figure">
 	<a href="tel:<?=$arResult['DETAIL_TEXT'];?>"><?=$arResult['DETAIL_TEXT'];?></a>
-	<a href="<?=$arResult['FILE']['SRC'];?>">Презентация</a>
+	<a href="<?=$arResult['FILE']['SRC'];?>" target="_blank">Презентация</a>
 </div>
