@@ -77,12 +77,24 @@
 						li{
 							display: inline-block;
 							vertical-align: top;
-							width: 24.5%;
+							width: 49.5%;
 							font-size: 17px;
 							margin: 0 0 15px;
+							position: relative;
+							box-sizing: border-box;
+							padding-left: 30px;
+
+							&::before{
+								content: "-";
+								color: #aacc33;
+								font-size: 40px;
+								position: absolute;
+								left: 0;
+								top: -17px;
+							}
 
 							.container{
-								max-width: 280px;
+								width: 95%;
 							}
 						}
 					}

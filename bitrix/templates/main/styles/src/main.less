@@ -13,17 +13,17 @@
 
 html{
 	min-height: 100%;
-	position: relative;
 
 	body{
 		width: 100%;
 		max-width: 1980px;
 		min-width: 960px;
-		height: 100%;
+		height: auto;
 		color: #393939;
 		font-family: roboto-r;
 		font-size: 14px;
 		background: #f2f2f0;
+		position: relative;
 
 		a{
 			color: #2277aa;
@@ -116,7 +116,7 @@ html{
 							}
 						}
 
-						p{
+						& > p{
 							font-size: 21px;
 							color: #114466;
 							margin: 0px 0px 14px;
@@ -126,6 +126,10 @@ html{
 							font-size: 17px;
 							max-width: 280px;
 							line-height: 21px;
+
+							p{
+								margin: 0;
+							}
 						}
 					}
 				}//wrapper
