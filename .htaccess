@@ -10,6 +10,9 @@ ErrorDocument 404 /404.php
 <IfModule mod_rewrite.c>
   Options +FollowSymLinks
   RewriteEngine On
+RewriteCond %{HTTP_HOST} !^biz-partners\.ru$
+RewriteCond %{HTTP_HOST} !^dev\.biz-partners\.ru$
+RewriteRule ^(.*)$ http://biz-partners.ru/$1 [R=301,L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-l
   RewriteCond %{REQUEST_FILENAME} !-d

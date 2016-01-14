@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 ?>
 <section class="main-partners">
 	<div class="wrapper">
-		<h1>Партнеры компании «Biz Partners»</h1>
+		<h1>Партнеры компании «Бизнес Партнерс»</h1>
 		<ul>
 			<?foreach($arResult['ITEMS'] as $arItem){
 				$foto = CFile::ResizeImageGet(

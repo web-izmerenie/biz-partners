@@ -8,7 +8,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 </main>
 <footer>
 	<div class="wrapper">
-		<div id="copy" class="column">© Biz Partners, 2001-2015
+		<div id="copy" class="column">© Бизнес Партнерс, 2001-2015
 			<p>
 				<?$APPLICATION->IncludeComponent(
 					"bitrix:news.detail",

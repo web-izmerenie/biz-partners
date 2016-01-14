@@ -13,9 +13,13 @@ module.exports.init = ->
 	$mainItems = $main.find 'li'
 	speedAnimation = 400
 
-	$mainItems.hover(
-		->
-				$(@).children('ul').stop(false, true).slideDown(speedAnimation)
-		->
-			$(@).children('ul').stop(false, true).slideUp(speedAnimation)
-	)
+	$mainItems.hover (->
+		clearTimeout $.data(this, 'timer')
+		$(@).children('ul').stop(true, true).slideDown(speedAnimation)
+		return
+	), ->
+		$.data this, 'timer', setTimeout($.proxy((->
+			$(@).children('ul').stop(true, true).slideUp(speedAnimation)
+			return
+		), this), 100)
+		return

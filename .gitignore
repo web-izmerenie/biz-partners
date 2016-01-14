@@ -12,6 +12,7 @@
 *.sql
 
 Thumbs.db
+yandex_*.html
 
 bower_components
 node_modules

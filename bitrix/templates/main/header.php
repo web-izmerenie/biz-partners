@@ -29,11 +29,14 @@ if(defined("CHANGE_ITEM"))
 	$mainClass[] = "change-item";
 if(defined("NEWS_ITEM"))
 	$mainClass[] = "news-item";
+if(defined("NEWS_PAGE"))
+	$htmlClass[] = "news-page";
 
 $mainClass = implode(" ", $mainClass);
+$htmlClass = implode(" ", $htmlClass);
 ?>
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="<?=$htmlClass?>">
 	<head>
 		<title><?$APPLICATION->ShowTitle()?></title>
 		<meta charset="utf-8">

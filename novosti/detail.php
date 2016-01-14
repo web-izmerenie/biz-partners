@@ -2,6 +2,7 @@
 define("NO_WRAP", "Y");
 define("CHANGE_ITEM", "Y");
 define("NEWS_ITEM", "Y");
+define("NEWS_PAGE", "Y");
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("detail");
 ?><?$APPLICATION->IncludeComponent(

@@ -34,7 +34,6 @@ $this->setFrameMode(true);?>
 	<?}?>
 </ol>
 <div class="tabs visible">
-	<div class="text"><?=$arResult['PROPERTIES']['ATT_DESC']['~VALUE']['TEXT'];?></div>
 	<div class="row">
 		<div id="price" class="column">
 			<?=$arResult['PROPERTIES']['ATT_TEXT_BOX']['~VALUE']['TEXT'];?>
