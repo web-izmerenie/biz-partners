@@ -18,7 +18,7 @@ else
 ?>
 <article>
 	<div class="wrapper">
-		<p class="date">25.06.2015</p>
+		<p class="date"><?=$arResult['DISPLAY_ACTIVE_FROM'];?></p>
 		<h1><?=$arResult['NAME'];?></h1>
 		<div class="text">
 			<span><?=$arResult['PROPERTIES']['ATT_LAW']['~VALUE']['TEXT'];?></span>
