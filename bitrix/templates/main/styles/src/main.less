@@ -12,7 +12,7 @@
  @import "./fonts.less";
 
 html{
-	min-height: 100%;
+	height: 100%;
 
 	body{
 		width: 100%;
@@ -59,7 +59,7 @@ html{
 			height: 100%;
 			z-index: 2;
 			cursor: pointer;
-      display: none;
+			display: none;
 		}
 
 		@import "./sections/forms.less";
@@ -77,19 +77,19 @@ html{
 		.content{
 			padding: 120px 0 387px;
 
-      .pathway{
-        font-size: 40px;
-        font-family: roboto-t;
-        line-height: 32px;
+			.pathway{
+				font-size: 40px;
+				font-family: roboto-t;
+				line-height: 32px;
 
-        a{
-          text-decoration: none;
+				a{
+					text-decoration: none;
 
-          &::after{
-            content: ' / ';
-          }
-        }
-      }//pathway
+					&::after{
+						content: ' / ';
+					}
+				}
+			}//pathway
 
 			.choise-right{
 				background: #fff;
@@ -145,6 +145,7 @@ html{
 				height: 150px;
 				overflow: hidden;
 				position: relative;
+				padding: 50px 0 0;
 
 				&::after{
 					content: "";
@@ -160,6 +161,14 @@ html{
 					padding: 0;
 				}
 			}//additional-text
+
+			.active-seo{
+				padding: 0 0 25px;
+
+				&::after{
+					background: none;
+				 }
+			}
 		}//content
 
 		@import "./sections/page-navigation.less";
@@ -169,12 +178,12 @@ html{
 		@import "./pages/contacts.less";
 		@import "./pages/about.less";
 		@import "./pages/change_legislation.less";
-    @import "./pages/news_item.less";
-    @import "./pages/news.less";
-    @import "./pages/catalog.less";
-    @import "./pages/catalog-sections.less";
-    @import "./pages/catalog-detail.less";
-    @import "./pages/links.less";
+		@import "./pages/news_item.less";
+		@import "./pages/news.less";
+		@import "./pages/catalog.less";
+		@import "./pages/catalog-sections.less";
+		@import "./pages/catalog-detail.less";
+		@import "./pages/links.less";
 
 		@import "./sections/footer.less";
 	}//body

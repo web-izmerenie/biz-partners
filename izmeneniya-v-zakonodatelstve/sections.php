@@ -8,13 +8,13 @@ $APPLICATION->SetTitle("Изменения в законодательстве")
  <a href="#rss" class="rss call-window">Подписаться на рассылку</a>
 </div>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section.list",
-	"news_sections",
+	"bitrix:catalog.section.list", 
+	"news_sections", 
 	array(
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
+		"CACHE_TYPE" => "N",
 		"COMPONENT_TEMPLATE" => "news_sections",
 		"COUNT_ELEMENTS" => "Y",
 		"IBLOCK_ID" => "4",

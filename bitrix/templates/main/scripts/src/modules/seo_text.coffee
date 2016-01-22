@@ -10,15 +10,15 @@ $ = require 'jquery'
 
 module.exports.init = ->
 	$('.additional-text').click(->
-		if($(@).hasClass 'active')
+		if($(@).hasClass 'active-seo')
 			$(@).animate
 				'height': '150px'
 				500
-			.removeClass 'active'
+			.removeClass 'active-seo'
 
 		else
 			$(@).animate
 				'height': '100%'
 				500
-			.addClass 'active'
+			.addClass 'active-seo'
 	)

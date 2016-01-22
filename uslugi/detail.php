@@ -4,9 +4,9 @@ define("CATALOG_DETAIL", "Y");
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("detail");
 ?><?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section",
-	"menu_header_detail",
-	Array(
+	"bitrix:catalog.section", 
+	"menu_header_detail", 
+	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_PICT_PROP" => "-",
 		"ADD_PROPERTIES_TO_BASKET" => "Y",
@@ -22,8 +22,8 @@ $APPLICATION->SetTitle("detail");
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"COMPONENT_TEMPLATE" => ".default",
+		"CACHE_TYPE" => "N",
+		"COMPONENT_TEMPLATE" => "menu_header_detail",
 		"DETAIL_URL" => "",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
@@ -55,19 +55,27 @@ $APPLICATION->SetTitle("detail");
 		"PAGER_TITLE" => "Товары",
 		"PAGE_ELEMENT_COUNT" => "30",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
-		"PRICE_CODE" => "",
+		"PRICE_CODE" => array(
+		),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRODUCT_ID_VARIABLE" => "id",
-		"PRODUCT_PROPERTIES" => "",
+		"PRODUCT_PROPERTIES" => array(
+		),
 		"PRODUCT_PROPS_VARIABLE" => "prop",
 		"PRODUCT_QUANTITY_VARIABLE" => "",
-		"PROPERTY_CODE" => "",
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"SECTION_CODE" => $_REQUEST["SECTION_CODE"],
 		"SECTION_CODE_PATH" => "",
 		"SECTION_ID" => "",
 		"SECTION_ID_VARIABLE" => "SECTION_CODE",
 		"SECTION_URL" => "",
-		"SECTION_USER_FIELDS" => "",
+		"SECTION_USER_FIELDS" => array(
+			0 => "",
+			1 => "",
+		),
 		"SEF_MODE" => "N",
 		"SEF_RULE" => "",
 		"SET_BROWSER_TITLE" => "N",
@@ -83,7 +91,8 @@ $APPLICATION->SetTitle("detail");
 		"USE_MAIN_ELEMENT_SECTION" => "N",
 		"USE_PRICE_COUNT" => "N",
 		"USE_PRODUCT_QUANTITY" => "N"
-	)
+	),
+	false
 );?> <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.element",
 	"detail_item",
