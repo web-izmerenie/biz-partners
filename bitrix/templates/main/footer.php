@@ -5,6 +5,11 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	<?if(!defined('NO_WRAP')){?>
 		</div>
 	<?}?>
+	<?$APPLICATION->IncludeFile("inc/seo_text.php", Array(
+		"IBLOCK_TYPE" => "service",
+		"IBLOCK_ID" => "13",
+		"ELEMENT_LINK" => $_SERVER['REQUEST_URI']
+	));?>
 </main>
 <footer>
 	<div class="wrapper">

@@ -13,6 +13,7 @@ catalogDetail = require './pages/catalog-detail.coffee'
 menu = require './modules/menu-hover.coffee'
 forms = require './modules/forms.coffee'
 header = require './modules/header.coffee'
+seo = require './modules/seo_text.coffee'
 
 $ ->
 	do menu.init
@@ -20,3 +21,4 @@ $ ->
 	do catalog.init
 	do catalogDetail.init
 	do header.init
+	do seo.init
