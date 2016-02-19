@@ -2,6 +2,7 @@
 define('MAIN', 'Y');
 define('NO_WRAP', 'Y');
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
+$APPLICATION->SetPageProperty("title", "Biz-Partners - услуги бухгалтерского аудита");
 $APPLICATION->SetTitle("Главная");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.section.list",
