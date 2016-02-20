@@ -10,8 +10,7 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-$this->setFrameMode(true);
-$GLOBALS['ID_CHOISE'] = $arResult['PROPERTIES']['ATT_CHOISE']['VALUE'];?>
+$this->setFrameMode(true);?>
 
 <section class="title">
 	<div class="wrapper">
