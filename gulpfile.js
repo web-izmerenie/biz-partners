@@ -48,10 +48,9 @@ gulp.task('connect', function () {
 	connect.server();
 });
 
-gulp.task('watch', ['jade', 'styles', 'coffee'], function () {
-	gulp.watch(tplPath + '/jade/**/*.jade', ['jade']);
+gulp.task('watch', ['styles', 'coffee'], function () {
 	gulp.watch(tplPath + '/styles/src/**/*.less', ['styles']);
 	gulp.watch(tplPath + '/scripts/src/**/*.coffee', ['coffee']);
 });
 
-gulp.task('default', ['jade', 'styles', 'coffee']);
+gulp.task('default', ['styles', 'coffee']);

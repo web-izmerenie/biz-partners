@@ -11,23 +11,4 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-?>
-<?$this->SetViewTarget('subitem');?>
-	<?if($arResult['ITEMS']){?>
-		<div class="subitem">
-			<div class="wrapper">
-				<nav>
-					<ul>
-						<?foreach($arResult['ITEMS'] as $arItem){?>
-							<li>
-								<a <?if($arItem['ACTIVE_CLASS']){?>class="active"<?}?> href="<?=$arItem['DETAIL_PAGE_URL'];?>">
-									<?=$arItem['NAME'];?>
-								</a>
-							</li>
-						<?}?>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	<?}?>
-<?$this->EndViewTarget();?>
+$GLOBALS['SUBITEM'] = $arResult['IBLOCK_SECTION_ID'];
