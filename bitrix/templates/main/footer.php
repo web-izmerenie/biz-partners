@@ -130,6 +130,39 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<div id="developer" class="column"><a href="http://web-izmerenie.ru/">сделано в</a></div>
 	</div>
 </footer>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+(w[c] = w[c] || []).push(function() {
+try {
+w.yaCounter36048365 = new Ya.Metrika({
+id:36048365,
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true,
+webvisor:true,
+trackHash:true
+});
+} catch(e) { }
+});
+
+var n = d.getElementsByTagName("script")[0],
+s = d.createElement("script"),
+f = function () { n.parentNode.insertBefore(s, n); };
+s.type = "text/javascript";
+s.async = true;
+s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+if (w.opera == "[object Opera]") {
+d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img
+src="https://mc.yandex.ru/watch/36048365" style="position:absolute;
+left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!--noindex-->
 <div class="overlay"></div>
 <div id="callme" class="module-window">
 	<div class="title"><img src="<?=$tplPath;?>img/green-call.png">
@@ -189,6 +222,27 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 			</p>
 		</div>
 	</form>
+</div>
+<!--/noindex-->
+<div style="display:none;" class="sitemap">
+	<p>Fdkhgfdo dbkkbt</p>
+	<a href="http://biz-partners.ru/uslugi/bukhgalterskiy-i-nalogovyy-uchet/autsorsing-bukhgalterskikh-protsessov.php?subitem=postanovka-bukhgalterskogo-ucheta&">1</a><br/>
+	<a href="http://biz-partners.ru/uslugi/bukhgalterskiy-i-nalogovyy-uchet/autsorsing-bukhgalterskikh-protsessov.php?subitem=postanovka-na-nalogovyy-uchet&">2</a><br/>
+	<a href="http://biz-partners.ru/uslugi/audit/audit-otchetnosti-podgotovlennoy-v-sootvetstvii-s-rsbu.php?subitem=organizatsiya-audita&">3</a><br/>
+	<a href="http://biz-partners.ru/uslugi/audit/audit-otchetnosti-podgotovlennoy-v-sootvetstvii-s-rsbu.php?subitem=finansovyy-audit&">4</a><br/>
+	<a href="http://biz-partners.ru/uslugi/audit/audit-otchetnosti-podgotovlennoy-v-sootvetstvii-s-rsbu.php?subitem=audit-otchetnosti&">5</a><br/>
+	<a href="http://biz-partners.ru/uslugi/audit/audit-otchetnosti-podgotovlennoy-v-sootvetstvii-s-rsbu.php?subitem=audit-nalogov&">6</a><br/>
+	<a href="http://biz-partners.ru/uslugi/audit/audit-otchetnosti-podgotovlennoy-v-sootvetstvii-s-rsbu.php?subitem=kadrovyy-audit&">7</a><br/>
+	<a href="http://biz-partners.ru/uslugi/audit/audit-otchetnosti-podgotovlennoy-v-sootvetstvii-s-rsbu.php?subitem=audit-osnovnykh-sredstv&">8</a><br/>
+	<a href="http://biz-partners.ru/uslugi/audit/audit-otchetnosti-podgotovlennoy-v-sootvetstvii-s-rsbu.php?subitem=audit-bukhgalterii&">9</a><br/>
+	<a href="http://biz-partners.ru/uslugi/bukhgalterskiy-i-nalogovyy-uchet/autsorsing-bukhgalterskikh-protsessov.php">10</a><br/>
+	<a href="http://biz-partners.ru/uslugi/bukhgalterskiy-i-nalogovyy-uchet/autsorsing-bukhgalterskikh-protsessov.php?subitem=nalogovoe-konsultirovanie&">11</a><br/>
+	<a href="http://biz-partners.ru/uslugi/bukhgalterskiy-i-nalogovyy-uchet/konsultatsionnye-uslugi.php">12</a><br/>
+	<a href="http://biz-partners.ru/uslugi/korporativnye-yuridicheskie-uslugi/registratsiya-i-likvidatsiya-otechestvennykh-i-inostrannykh-kompaniy.php?subitem=registratsiya-kompaniy&">13</a><br/>
+	<a href="http://biz-partners.ru/uslugi/korporativnye-yuridicheskie-uslugi/registratsiya-i-likvidatsiya-otechestvennykh-i-inostrannykh-kompaniy.php?subitem=registratsiya-zao&">14</a><br/>
+	<a href="http://biz-partners.ru/uslugi/korporativnye-yuridicheskie-uslugi/registratsiya-i-likvidatsiya-otechestvennykh-i-inostrannykh-kompaniy.php?subitem=likvidatsiya-kompaniy&">15</a><br/>
+	<a href="http://biz-partners.ru/uslugi/korporativnye-yuridicheskie-uslugi/vizovaya-podderzhka-i-razreshenie-na-rabotu-dlya-inostrannykh-grazhdan.php?subitem=vizovaya-podderzhka&">16</a><br/>
+	<a href="http://biz-partners.ru/uslugi/korporativnye-yuridicheskie-uslugi/vizovaya-podderzhka-i-razreshenie-na-rabotu-dlya-inostrannykh-grazhdan.php?subitem=razreshenie-na-rabotu&">17</a><br/>
 </div>
 </body>
 </html>
