@@ -57,7 +57,9 @@ $htmlClass = implode(" ", $htmlClass);
 						<a href="/" class="logo"></a>
 					<?}?>
 				</div>
-				<?$APPLICATION->IncludeComponent(
+				<!--noindex-->
+				<?
+					$APPLICATION->IncludeComponent(
 					"bitrix:menu",
 					"main_menu",
 					array(
@@ -75,7 +77,8 @@ $htmlClass = implode(" ", $htmlClass);
 						"USE_EXT" => "N"
 					),
 					false
-				);?>
+					);?>
+				<!--/noindex-->
 				<div id="contacts" class="column">
 					<?$APPLICATION->IncludeComponent(
 						"bitrix:news.detail",

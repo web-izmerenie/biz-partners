@@ -100,7 +100,7 @@ $APPLICATION->SetTitle("detail");
 		"BROWSER_TITLE" => "-",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
+		"CACHE_TYPE" => "N",
 		"CHECK_SECTION_ID_VARIABLE" => "N",
 		"COMPONENT_TEMPLATE" => ".default",
 		"DETAIL_PICTURE_MODE" => "IMG",
