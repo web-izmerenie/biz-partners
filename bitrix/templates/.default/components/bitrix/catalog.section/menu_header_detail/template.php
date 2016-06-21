@@ -17,15 +17,19 @@ $this->setFrameMode(true);
 		<a href="<?=$arResult['SECTION_PAGE_URL'];?>"><?=$arResult['NAME'];?></a>
 	</div>
 </section>
-<section class="items">
-	<div class="wrapper">
-		<nav>
-			<?foreach($arResult['ITEMS'] as $arItem){?>
-				<a href="<?=$arItem['DETAIL_PAGE_URL']?>"
-					<?if($_GET['ELEMENT_CODE'] == $arItem['CODE']){?>class="active"<?}?>>
-					<?=$arItem['NAME'];?>
-				</a>
-			<?}?>
-		</nav>
-	</div>
-</section>
+<!--noindex-->
+<?if(!isBot()){?>
+	<section class="items">
+		<div class="wrapper">
+			<nav>
+				<?foreach($arResult['ITEMS'] as $arItem){?>
+					<a href="<?=$arItem['DETAIL_PAGE_URL']?>"
+						<?if($_GET['ELEMENT_CODE'] == $arItem['CODE']){?>class="active"<?}?>>
+						<?=$arItem['NAME'];?>
+					</a>
+				<?}?>
+			</nav>
+		</div>
+	</section>
+<?}?>
+<!--/noindex-->

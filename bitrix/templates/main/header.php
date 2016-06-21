@@ -5,6 +5,8 @@ $tplPath = $APPLICATION->GetTemplatePath();
 global $tplPath;
 $uri = $APPLICATION->GetCurUri();
 
+require($_SERVER['DOCUMENT_ROOT'].$tplPath."inc/bot_detector.php");
+
 $mainClass = array();
 
 if(defined("ERROR_404"))
@@ -51,34 +53,61 @@ $htmlClass = implode(" ", $htmlClass);
 		<header>
 			<div class="wrapper">
 				<div id="logo" class="column">
-					<?if($uri == "/" || $uri == "/index.php"){?>
+					<?if($uri == "/"){?>
 						<div class="logo"></div>
 					<?}else{?>
 						<a href="/" class="logo"></a>
 					<?}?>
 				</div>
-				<!--noindex-->
-				<?
+				<?if($uri != "/"){?>
+					<!--noindex-->
+				<?}?>
+				<?if(isBot()){
+					if($uri == "/"){
+						$APPLICATION->IncludeComponent(
+							"bitrix:menu",
+							"main_menu",
+							array(
+								"ALLOW_MULTI_SELECT" => "N",
+								"CHILD_MENU_TYPE" => "left",
+								"COMPONENT_TEMPLATE" => "main_menu",
+								"DELAY" => "N",
+								"MAX_LEVEL" => "1",
+								"MENU_CACHE_GET_VARS" => array(
+								),
+								"MENU_CACHE_TIME" => "3600",
+								"MENU_CACHE_TYPE" => "A",
+								"MENU_CACHE_USE_GROUPS" => "Y",
+								"ROOT_MENU_TYPE" => "top",
+								"USE_EXT" => "N"
+							),
+							false
+							);
+					}
+				}else{
 					$APPLICATION->IncludeComponent(
-					"bitrix:menu",
-					"main_menu",
-					array(
-						"ALLOW_MULTI_SELECT" => "N",
-						"CHILD_MENU_TYPE" => "left",
-						"COMPONENT_TEMPLATE" => "main_menu",
-						"DELAY" => "N",
-						"MAX_LEVEL" => "1",
-						"MENU_CACHE_GET_VARS" => array(
+						"bitrix:menu",
+						"main_menu",
+						array(
+							"ALLOW_MULTI_SELECT" => "N",
+							"CHILD_MENU_TYPE" => "left",
+							"COMPONENT_TEMPLATE" => "main_menu",
+							"DELAY" => "N",
+							"MAX_LEVEL" => "1",
+							"MENU_CACHE_GET_VARS" => array(
+							),
+							"MENU_CACHE_TIME" => "3600",
+							"MENU_CACHE_TYPE" => "A",
+							"MENU_CACHE_USE_GROUPS" => "Y",
+							"ROOT_MENU_TYPE" => "top",
+							"USE_EXT" => "N"
 						),
-						"MENU_CACHE_TIME" => "3600",
-						"MENU_CACHE_TYPE" => "A",
-						"MENU_CACHE_USE_GROUPS" => "Y",
-						"ROOT_MENU_TYPE" => "top",
-						"USE_EXT" => "N"
-					),
-					false
-					);?>
-				<!--/noindex-->
+						false
+						);
+				}?>
+				<?if($uri != "/"){?>
+					<!--/noindex-->
+				<?}?>
 				<div id="contacts" class="column">
 					<?$APPLICATION->IncludeComponent(
 						"bitrix:news.detail",
