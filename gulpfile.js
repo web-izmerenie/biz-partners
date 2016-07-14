@@ -5,8 +5,8 @@ var less = require("gulp-less");
 var autoprefixer = require('gulp-autoprefixer');
 var clean = require('gulp-clean');
 var jade = require('gulp-jade');
-var connect = require('gulp-connect');
 var browserify = require('gulp-browserify');
+var browserSync = require('browser-sync').create();
 
 var tplPath = './bitrix/templates/main';
 
@@ -24,13 +24,15 @@ gulp.task('styles', ['styles-clean'], function () {
 		.pipe(less())
 		.pipe(autoprefixer('last 10 versions', '> 1%', 'ie 9'))
 		.pipe(rename('build.css'))
-		.pipe(gulp.dest(tplPath + '/styles/build/'));
+		.pipe(gulp.dest(tplPath + '/styles/build/'))
+		.pipe(browserSync.stream());
 });
 
 gulp.task('jade', function () {
 	gulp.src(tplPath + '/jade/*.jade')
 		.pipe(jade({pretty: true}))
-		.pipe(gulp.dest('./html/'));
+		.pipe(gulp.dest('./html/'))
+		.pipe(browserSync.stream());
 });
 
 gulp.task('coffee', ['scripts-clean'], function () {
@@ -42,15 +44,26 @@ gulp.task('coffee', ['scripts-clean'], function () {
 		}))
 		.pipe(rename('build.js'))
 		.pipe(gulp.dest(tplPath + '/scripts/build/'))
+		.pipe(browserSync.stream());
 });
 
-gulp.task('connect', function () {
-	connect.server();
+gulp.task('server', function() {
+	browserSync.init({
+		server: {
+			baseDir: "./"
+		}
+	});
 });
 
 gulp.task('watch', ['styles', 'coffee'], function () {
 	gulp.watch(tplPath + '/styles/src/**/*.less', ['styles']);
 	gulp.watch(tplPath + '/scripts/src/**/*.coffee', ['coffee']);
+});
+
+gulp.task('watch-server', ['styles', 'coffee', 'jade', 'server'], function () {
+	gulp.watch(tplPath + '/styles/src/**/*.less', ['styles']);
+	gulp.watch(tplPath + '/scripts/src/**/*.coffee', ['coffee']);
+	gulp.watch(tplPath + '/jade/*.jade', ['jade']);
 });
 
 gulp.task('default', ['styles', 'coffee']);
