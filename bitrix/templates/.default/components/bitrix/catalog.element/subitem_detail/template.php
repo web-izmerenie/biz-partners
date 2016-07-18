@@ -10,28 +10,11 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-$this->setFrameMode(true);?>
-<section class="title">
-	<div class="wrapper">
-		<h1><?=$arResult['NAME'];?></h1>
-		<div class="text"><?=$arResult['PREVIEW_TEXT'];?></div>
-	</div>
-</section>
-<section class="subitem_description">
-	<div class="wrapper">
-		<?=$arResult['DETAIL_TEXT'];?>
+$this->setFrameMode(true);
 
-		<?if($arResult['PROPERTIES']['ATT_TEXT']['~VALUE']['TEXT']){?>
-			<div class="tabs visible">
-				<div class="row">
-					<div id="price" class="column">
-						<?=$arResult['PROPERTIES']['ATT_TEXT']['~VALUE']['TEXT'];?>
-					</div>
-					<div id="tel" class="column"><span>Узнать подробности по телефону:</span>
-						<p><?=$arResult['PROPERTIES']['ATT_TEL']['VALUE']?></p>
-					</div>
-				</div>
-			</div>
-		<?}?>
-	</div>
-</section>
+if($arResult['PROPERTIES']['ATT_TEMPLATE']['VALUE_XML_ID'] == "standart"
+|| empty($arResult['PROPERTIES']['ATT_TEMPLATE']['VALUE_XML_ID'])){
+	require($_SERVER['DOCUMENT_ROOT'].$templateFolder."/standart_tpl.php");
+}else{
+	require($_SERVER['DOCUMENT_ROOT'].$templateFolder."/new_tpl.php");
+}
