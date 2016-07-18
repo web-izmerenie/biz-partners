@@ -42,11 +42,12 @@
 
 						a{
 							font-family: roboto-m;
-							font-size: 18px;
+							font-size: 16px;
 							text-decoration: none;
 							background: #e6e5e3;
-							padding: 12px 39px 14px;
+							padding: 10px 40px 27px;
 							line-height: 20px;
+							color: #2878a8;
 
 							&:hover{
 								color: #aacc33;
@@ -275,16 +276,36 @@
 					ul li{
 						display: inline-block;
 						vertical-align: middle;
-						padding: 12px 39px 14px;
-						max-width: 25%;
-						box-sizing: border-box;
+						max-width: 24.5%;
+						position: relative;
+
+						&::after{
+							content: "";
+							border-right: 1px solid #e6e5e3;
+							position: absolute;
+							right: 0;
+							top: 50%;
+							transform: translateY(-50%);
+							width: 1px;
+							height: 50px;
+						}
+
+						&:nth-child(4n), &:last-child{
+							&::after{
+								display: none;
+							}
+						}
 
 						a{
 							font-family: roboto-m;
-							font-size: 18px;
+							font-size: 16px;
 							text-decoration: none;
-							line-height: 20px;
+							line-height: 19px;
 							.size(100%);
+							color: #393939;
+							padding: 22px 73px 17px;
+							display: block;
+							box-sizing: border-box;
 
 							&:hover{
 								color: #aacc33;
