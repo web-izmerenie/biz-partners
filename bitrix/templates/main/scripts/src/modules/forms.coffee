@@ -65,7 +65,7 @@ module.exports.init = ->
 				url: $sendUrl
 				data: $(@).serialize()
 				error: (jqXHR, textStatus, errorThrown) ->
-					alert 'Ошибка при отправке #{textStatus}'
+					alert "Ошибка при отправке #{errorThrown}"
 				success: ->
 					errorMessage.slideUp(speedAnimation)
 					sucsessMessage.css

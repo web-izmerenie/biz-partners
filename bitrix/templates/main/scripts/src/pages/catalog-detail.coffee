@@ -35,7 +35,7 @@ module.exports.init = ->
 
 	do $aboutServList.hide
 	$aboutServList.slice(0, aboutServBtnCnt).show()
-	console.log($aboutServList.length)
+	$aboutServBtn.hide() if $aboutServList.length == aboutServBtnCnt
 
 	$aboutServBtn.click (e) ->
 		do e.preventDefault
