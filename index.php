@@ -1,5 +1,5 @@
 <?
-if($_SERVER["HTTP_HOST"] != "dev.biz-partners.ru"){
+if($_SERVER["HTTP_HOST"] != "biz-partners.ru"){
 	define("CATALOG_DETAIL", "Y");
 }else{
 	define('MAIN', 'Y');
@@ -9,7 +9,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetPageProperty("title", "Biz-Partners - услуги бухгалтерского аудита");
 $APPLICATION->SetTitle("Главная");
 ?>
-<?if($_SERVER["HTTP_HOST"] != "dev.biz-partners.ru"){?>
+<?if($_SERVER["HTTP_HOST"] != "biz-partners.ru"){?>
 	<?
 		$elementId = "";
 
