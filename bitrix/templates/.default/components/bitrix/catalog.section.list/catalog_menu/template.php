@@ -18,7 +18,7 @@ $this->setFrameMode(true);?>
 	<?}?>
 	<?foreach($arResult['SECTIONS'] as $arSection){?>
 		<li>
-			<a href="<?=$arSection['SECTION_PAGE_URL'];?>"><?=$arSection['NAME'];?></a>
+			<a href="http://biz-partners.ru<?=$arSection['SECTION_PAGE_URL'];?>"><?=$arSection['NAME'];?></a>
 		</li>
 	<?}?>
 </ul>
