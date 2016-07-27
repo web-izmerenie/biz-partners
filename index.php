@@ -89,7 +89,8 @@ $APPLICATION->SetTitle("Главная");
 			"USE_MAIN_ELEMENT_SECTION" => "N",
 			"USE_PRICE_COUNT" => "N",
 			"USE_PRODUCT_QUANTITY" => "N",
-			"USE_VOTE_RATING" => "N"
+			"USE_VOTE_RATING" => "N",
+			"MAIN_TEMPALTE_PATH" => $tplPath
 		)
 	);?>
 <?}else{?>

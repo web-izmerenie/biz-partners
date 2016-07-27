@@ -29,7 +29,7 @@
 					</li>
 					<?}?>
 				</ul>
-				<a href="1" class="btn">Подробнее</a>
+				<a href="3" class="btn">Подробнее</a>
 			</div>
 		</div>
 	</section>
