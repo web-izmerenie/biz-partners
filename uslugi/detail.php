@@ -156,7 +156,8 @@ $APPLICATION->SetTitle("detail");
 		"USE_MAIN_ELEMENT_SECTION" => "N",
 		"USE_PRICE_COUNT" => "N",
 		"USE_PRODUCT_QUANTITY" => "N",
-		"USE_VOTE_RATING" => "N"
+		"USE_VOTE_RATING" => "N",
+		"MAIN_TEMPALTE_PATH" => $tplPath
 	)
 );?> <?}else{?> <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.element",
@@ -367,7 +368,7 @@ $APPLICATION->SetTitle("detail");
 		"TEMPLATE_THEME" => "blue",
 		"USE_MAIN_ELEMENT_SECTION" => "N",
 		"USE_PRICE_COUNT" => "N",
-		"USE_PRODUCT_QUANTITY" => "N"
+		"USE_PRODUCT_QUANTITY" => "N",
 	)
 );?> <section class="order-call-write">
 <div class="wrapper">

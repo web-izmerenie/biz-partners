@@ -45,6 +45,7 @@ $htmlClass = implode(" ", $htmlClass);
 		<meta name="viewport" content-width="width=device-width">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<?$APPLICATION->ShowHead();?>
+		<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
 		<link rel="stylesheet" href="<?=$tplPath;?>/styles/build/build.css">
 		<script type="text/javascript" src="<?=$tplPath;?>/scripts/build/build.js"></script>
 	</head>
