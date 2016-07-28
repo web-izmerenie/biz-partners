@@ -57,7 +57,7 @@ $htmlClass = implode(" ", $htmlClass);
 					<?if($uri == "/"){?>
 						<div class="logo"></div>
 					<?}else{?>
-						<a href="/" class="logo"></a>
+						<a href="http://biz-partners.ru" class="logo"></a>
 					<?}?>
 				</div>
 				<?if($uri != "/"){?>
