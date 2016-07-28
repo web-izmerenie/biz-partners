@@ -14,6 +14,7 @@ menu = require './modules/menu-hover.coffee'
 forms = require './modules/forms.coffee'
 header = require './modules/header.coffee'
 seo = require './modules/seo_text.coffee'
+bankrotstvoYT = require './subdomens/yandex-target-bankrotstvo-ooo'
 
 $ ->
 	do menu.init
@@ -22,3 +23,4 @@ $ ->
 	do catalogDetail.init
 	do header.init
 	do seo.init
+	do bankrotstvoYT.init

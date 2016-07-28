@@ -10,7 +10,7 @@ $APPLICATION->SetPageProperty("title", "Biz-Partners - услуги бухгал
 $APPLICATION->SetTitle("Главная");
 ?>
 <?if($_SERVER["HTTP_HOST"] != "biz-partners.ru"){
-	if($_SERVER["HTTP_HOST"] == "bankrotstvo-ooo.biz-partners.ru"){
+	if($_SERVER["HTTP_HOST"] == "bankrotstvo-ooo.biz-partners.ru" || $_SERVER["HTTP_HOST"] == "dev.biz-partners.ru"){
 
 		$_REQUEST["subitem"] = "bankrotstvo-ooo";
 		$_REQUEST["SECTION_CODE"] = "korporativnye-yuridicheskie-uslugi";
@@ -21,7 +21,7 @@ $APPLICATION->SetTitle("Главная");
 		$_REQUEST["subitem"] = "razreshenie-na-rabotu";
 		$_REQUEST["SECTION_CODE"] = "korporativnye-yuridicheskie-uslugi";
 		$_REQUEST["ELEMENT_CODE"] = "vizovaya-podderzhka-i-razreshenie-na-rabotu-dlya-inostrannykh-grazhdan";
-		
+
 	}
 	require($_SERVER["DOCUMENT_ROOT"]."/uslugi/detail.php");
 	}else{?>

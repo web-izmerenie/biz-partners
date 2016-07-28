@@ -130,7 +130,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<div id="developer" class="column"><a href="http://web-izmerenie.ru/">сделано в</a></div>
 	</div>
 </footer>
-<?if($_SERVER["HTTP_HOST"] == "bankrotstvo-ooo.biz-partners.ru"){?>
+<?if($_SERVER["HTTP_HOST"] == "bankrotstvo-ooo.biz-partners.ru" || $_SERVER["HTTP_HOST"] == "dev.biz-partners.ru"){?>
 	<!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (d, w, c) {

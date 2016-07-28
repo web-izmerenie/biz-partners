@@ -57,7 +57,11 @@ gulp.task('server', function() {
 
 gulp.task('watch', ['styles', 'coffee'], function () {
 	gulp.watch(tplPath + '/styles/src/**/*.less', ['styles']);
-	gulp.watch(tplPath + '/scripts/src/**/*.coffee', ['coffee']);
+	gulp.watch(tplPath + '/scripts/src/**/*.coffee', function(){
+		setTimeout(function(){
+			gulp.start("coffee")
+		}, 1000);
+	});
 });
 
 gulp.task('watch-server', ['styles', 'coffee', 'jade', 'server'], function () {

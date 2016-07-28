@@ -42,6 +42,7 @@ module.exports.init = ->
 		$mail = $(@).find 'input[name="email"]'
 		regMail = /^([0-9a-zA-Z]([-.w]*[0-9a-zA-Z])*@[0-9a-zA-Z]([-.w]*[0-9a-zA-Z])+[a-zA-Z])$/
 		$sendUrl = $(@).data 'send'
+		$parent = $(@).parent()
 
 		do e.preventDefault
 
@@ -67,6 +68,10 @@ module.exports.init = ->
 				error: (jqXHR, textStatus, errorThrown) ->
 					alert "Ошибка при отправке #{errorThrown}"
 				success: ->
+					if $parent[0].id == "writeme"
+						yaCounter38723445.reachGoal('SUBMIT_WRITE_ME')
+					else if $parent[0].id == "callme"
+						yaCounter38723445.reachGoal('SUBMIT_CALL_ME')
 					errorMessage.slideUp(speedAnimation)
 					sucsessMessage.css
 						display: 'flex',
