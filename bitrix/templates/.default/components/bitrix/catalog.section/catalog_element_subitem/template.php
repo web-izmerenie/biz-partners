@@ -15,7 +15,7 @@ $this->setFrameMode(true);
 <ul>
 	<?foreach($arResult['ITEMS'] as $arItem){?>
 		<li>
-			<a href="<?=$arItem['DETAIL_PAGE_URL'];?>"><?=$arItem['NAME'];?></a>
+			<a href="http://biz-partners.ru<?=$arItem['DETAIL_PAGE_URL'];?>"><?=$arItem['NAME'];?></a>
 		</li>
 	<?}?>
 </ul>

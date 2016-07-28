@@ -23,7 +23,7 @@ $this->setFrameMode(true);
 		<div class="wrapper">
 			<nav>
 				<?foreach($arResult['ITEMS'] as $arItem){?>
-					<a href="<?=$arItem['DETAIL_PAGE_URL']?>"
+					<a href="http://biz-partners.ru<?=$arItem['DETAIL_PAGE_URL']?>"
 						<?if($_GET['ELEMENT_CODE'] == $arItem['CODE']){?>class="active"<?}?>>
 						<?=$arItem['NAME'];?>
 					</a>
