@@ -17,6 +17,11 @@ module.exports.init = ->
 	$sucsessMessage = $form.find '.sucsess'
 	speedAnimation = 300
 
+	if(location.host == "bankrotstvo-ooo.biz-partners.ru")
+		idCounter = window.yaCounter38723445
+	else if(location.host == "vedenie-buh-uchet.biz-partners.ru")
+		idCounter = window.yaCounter38840870
+
 	$overlay.click ->
 		do $moduleWindow.hide
 		do $sucsessMessage.hide
@@ -69,9 +74,9 @@ module.exports.init = ->
 					alert "Ошибка при отправке #{errorThrown}"
 				success: ->
 					if $parent[0].id == "writeme"
-						yaCounter38723445.reachGoal('SUBMIT_WRITE_ME')
+						idCounter.reachGoal('SUBMIT_WRITE_ME')
 					else if $parent[0].id == "callme"
-						yaCounter38723445.reachGoal('SUBMIT_CALL_ME')
+						idCounter.reachGoal('SUBMIT_CALL_ME')
 					errorMessage.slideUp(speedAnimation)
 					sucsessMessage.css
 						display: 'flex',

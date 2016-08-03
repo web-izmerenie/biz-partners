@@ -14,13 +14,15 @@ menu = require './modules/menu-hover.coffee'
 forms = require './modules/forms.coffee'
 header = require './modules/header.coffee'
 seo = require './modules/seo_text.coffee'
-bankrotstvoYT = require './subdomens/yandex-target-bankrotstvo-ooo'
+yandexTarget = require './subdomens/yandex-target'
 
 $ ->
 	do menu.init
-	do forms.init
 	do catalog.init
 	do catalogDetail.init
 	do header.init
 	do seo.init
-	do bankrotstvoYT.init
+
+window.onload = ->
+	do forms.init
+	do yandexTarget.init

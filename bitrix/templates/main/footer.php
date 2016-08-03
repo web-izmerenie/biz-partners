@@ -130,7 +130,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<div id="developer" class="column"><a href="http://web-izmerenie.ru/">сделано в</a></div>
 	</div>
 </footer>
-<?if($_SERVER["HTTP_HOST"] == "bankrotstvo-ooo.biz-partners.ru" || $_SERVER["HTTP_HOST"] == "dev.biz-partners.ru"){?>
+<?if($_SERVER["HTTP_HOST"] == "bankrotstvo-ooo.biz-partners.ru"){?>
 	<!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (d, w, c) {
@@ -160,6 +160,36 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/38723445" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<?}else if($_SERVER["HTTP_HOST"] == "vedenie-buh-uchet.biz-partners.ru" || $_SERVER["HTTP_HOST"] == "dev.biz-partners.ru"){?>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+	    (function (d, w, c) {
+	        (w[c] = w[c] || []).push(function() {
+	            try {
+	                w.yaCounter38840870 = new Ya.Metrika({
+	                    id:38840870,
+	                    clickmap:true,
+	                    trackLinks:true,
+	                    accurateTrackBounce:true,
+	                    webvisor:true
+	                });
+	            } catch(e) { }
+	        });
+
+	        var n = d.getElementsByTagName("script")[0],
+	            s = d.createElement("script"),
+	            f = function () { n.parentNode.insertBefore(s, n); };
+	        s.type = "text/javascript";
+	        s.async = true;
+	        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+	        if (w.opera == "[object Opera]") {
+	            d.addEventListener("DOMContentLoaded", f, false);
+	        } else { f(); }
+	    })(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/38840870" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
 <?}else{?>
 	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript">

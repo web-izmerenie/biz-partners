@@ -1,5 +1,5 @@
 ###
-* Yandex targets from bankrotstvo-ooo
+* Yandex targets from subdomens
 *
 * @author Andrey Chechkin
 * @license GNU/AGPLv3
@@ -9,7 +9,13 @@
 $ = require 'jquery'
 
 module.exports.init = ->
-	if(location.host == "bankrotstvo-ooo.biz-partners.ru")
+	if(location.host == "bankrotstvo-ooo.biz-partners.ru" || location.host == "vedenie-buh-uchet.biz-partners.ru")
+
+		if(location.host == "bankrotstvo-ooo.biz-partners.ru")
+			idCounter = window.yaCounter38723445
+		else if(location.host == "vedenie-buh-uchet.biz-partners.ru")
+			idCounter = window.yaCounter38840870
+
 		$header = $ "header"
 		$headerTelephone = $header.find "#contacts a:first"
 		$headerPresention = $header.find "#contacts a:last"
@@ -28,49 +34,49 @@ module.exports.init = ->
 		$contactsLink = $headerMenu.find "ul li:last a"
 
 		$headerTelephone.hover(->
-			yaCounter38723445.reachGoal('HOVER_TELEPHONE')
+			idCounter.reachGoal('HOVER_TELEPHONE', -> console.log "навели")
 		)
 
 		$downloadLink.click(->
-			yaCounter38723445.reachGoal('CLICK_DOWNLOAD')
+			idCounter.reachGoal('CLICK_DOWNLOAD')
 		)
 
 		$callBtn.click(->
-			yaCounter38723445.reachGoal('CALL_BUTTON')
+			idCounter.reachGoal('CALL_BUTTON')
 		)
 
 		$formWriteMeSubmitBtn.click(->
-			yaCounter38723445.reachGoal('CLICK_SUBMIT_WRITE_ME')
+			idCounter.reachGoal('CLICK_SUBMIT_WRITE_ME')
 		)
 
 		$callMeBtn.click(->
-			yaCounter38723445.reachGoal('CALL_ME_CLICK')
+			idCounter.reachGoal('CALL_ME_CLICK')
 		)
 
 		$callMeFormBtn.click(->
-			yaCounter38723445.reachGoal('CALL_ME_CLICK_SUBMIT')
+			idCounter.reachGoal('CALL_ME_CLICK_SUBMIT')
 		)
 
 		$uslugiLinkMenu.click(->
-			yaCounter38723445.reachGoal('USLUGI_LINK')
+			idCounter.reachGoal('USLUGI_LINK')
 		)
 
 		$uslugiSubmenu.click(->
-			yaCounter38723445.reachGoal('USLUGI_LINK')
+			idCounter.reachGoal('USLUGI_LINK')
 		)
 
 		$footerUslugi.click(->
-			yaCounter38723445.reachGoal('USLUGI_LINK')
+			idCounter.reachGoal('USLUGI_LINK')
 		)
 
 		$aboutLink.click(->
-			yaCounter38723445.reachGoal('ABOUT_LINK')
+			idCounter.reachGoal('ABOUT_LINK')
 		)
 
 		$contactsLink.click(->
-			yaCounter38723445.reachGoal('CONTACTS_LINK')
+			idCounter.reachGoal('CONTACTS_LINK')
 		)
 
 		$headerPresention.click(->
-			yaCounter38723445.reachGoal('PRESENTATION')
+			idCounter.reachGoal('PRESENTATION')
 		)

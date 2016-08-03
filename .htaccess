@@ -15,6 +15,7 @@ ErrorDocument 404 /404.php
 	RewriteCond %{HTTP_HOST} !^biz-partners\.web-izmerenie\.ru$
 	RewriteCond %{HTTP_HOST} !^bankrotstvo-ooo\.biz-partners\.ru$
 	RewriteCond %{HTTP_HOST} !^razreshinie-na-rabotu\.biz-partners\.ru$
+	RewriteCond %{HTTP_HOST} !^vedenie-buh-uchet\.biz-partners\.ru$
 	RewriteRule ^(.*)$ http://biz-partners.ru/$1 [R=301,L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-l
